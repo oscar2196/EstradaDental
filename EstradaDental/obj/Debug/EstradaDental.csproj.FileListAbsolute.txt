@@ -66,3 +66,4 @@ c:\users\mercu\documents\visual studio 2015\Projects\EstradaDental\EstradaDental
 c:\users\mercu\documents\visual studio 2015\Projects\EstradaDental\EstradaDental\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 c:\users\mercu\documents\visual studio 2015\Projects\EstradaDental\EstradaDental\obj\Debug\EstradaDental.dll
 c:\users\mercu\documents\visual studio 2015\Projects\EstradaDental\EstradaDental\obj\Debug\EstradaDental.pdb
+C:\Users\mercu\Documents\Visual Studio 2015\Projects\EstradaDental\EstradaDental\obj\Debug\EstradaDental.csprojResolveAssemblyReference.cache
