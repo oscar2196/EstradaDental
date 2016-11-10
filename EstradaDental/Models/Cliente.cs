@@ -10,12 +10,13 @@ namespace EstradaDental.Models
     {
         public int clienteID { get; set; }
 
+        [Display(Name ="Name")]
         public string nombre { get; set; }
-
+        [Display(Name ="Last name")]
         public string apellidoP { get; set; }
-
+        [Display(Name ="Mother last name")]
         public string apellidoM { get; set; }
-        
+        [Display(Name ="Address")]
         public string direccion { get; set; }
 
         public int telefono { get; set; }

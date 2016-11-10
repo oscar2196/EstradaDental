@@ -11,9 +11,9 @@ namespace EstradaDental.Models
         [Key]
         public int historialID { get; set; }
 
-
+        [Display(Name = "Please enter your dental history")]
         public string comentario { get; set; }
-
+        [Display(Name ="Day and hour")]
         public DateTime fecha { get; set; }
 
 
