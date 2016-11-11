@@ -136,3 +136,6 @@ C:\Users\Angel\Desktop\estradadental\EstradaDental\bin\Microsoft.Owin.Security.M
 C:\Users\Angel\Desktop\estradadental\EstradaDental\obj\Debug\EstradaDental.csprojResolveAssemblyReference.cache
 C:\Users\Angel\Desktop\estradadental\EstradaDental\obj\Debug\EstradaDental.dll
 C:\Users\Angel\Desktop\estradadental\EstradaDental\obj\Debug\EstradaDental.pdb
+C:\Users\Angel\Desktop\estradadental\EstradaDental\obj\Debug\EstradaDental.Migrations.InitialCreate.resources
+C:\Users\Angel\Desktop\estradadental\EstradaDental\obj\Debug\EstradaDental.csproj.GenerateResource.Cache
+C:\Users\Angel\Desktop\estradadental\EstradaDental\obj\Debug\EstradaDental.Migrations.InitialCreate1.resources
