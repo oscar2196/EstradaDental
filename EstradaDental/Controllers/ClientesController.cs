@@ -15,8 +15,10 @@ namespace EstradaDental.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Clientes
-        public ActionResult Index()
+        
+        public ActionResult ListadoClientes()
         {
+
             return View(db.cliente.ToList());
         }
 

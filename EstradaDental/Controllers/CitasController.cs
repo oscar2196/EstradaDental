@@ -38,7 +38,7 @@ namespace EstradaDental.Controllers
         }
 
         // GET: Citas/Create
-        public ActionResult Create()
+        public ActionResult Create(int id)
         {
             ViewBag.clienteID = new SelectList(db.cliente, "clienteID", "nombre");
             ViewBag.doctorID = new SelectList(db.doctor, "doctorID", "nombre");
