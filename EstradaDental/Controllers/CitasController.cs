@@ -17,6 +17,7 @@ namespace EstradaDental.Controllers
         // GET: Citas
         public ActionResult Index()
         {
+
             var cita = db.cita.Include(c => c.cliente).Include(c => c.doctor);
             return View(cita.ToList());
         }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -10,17 +11,31 @@ namespace EstradaDental.Models
 
         public int citaID { get; set; }
 
+
         public bool confirmacion { get; set; }
 
+
+        //[Required]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime fechaIn { get; set; }
 
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime fechaOut { get; set; }
 
+        //[Required]
+        [Display(Name = "Doctor name")]
         public int doctorID { get; set; }
 
+        
+        //[Required]
+        [Display(Name = "Client name")]
         public int clienteID { get; set; }
 
+        //[Required]
+        [Display(Name = "Comments on the reason for the appointment")]
         public string comentario { get; set; }
+
+
 
         //Una cita tiene un cliente
         virtual public Cliente cliente { get; set; }
