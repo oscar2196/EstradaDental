@@ -79,6 +79,27 @@ namespace EstradaDental.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        public int clienteID { get; set; }
+        //[Required]
+        [Display(Name = "Name")]
+        public string nombre { get; set; }
+
+        //[Required]
+        [Display(Name = "Last name")]
+        public string apellidoP { get; set; }
+
+        //[Required]
+        [Display(Name = "Address")]
+        public string direccion { get; set; }
+
+        //[Required]
+        [Display(Name = "Number phone")]
+        public int telefono { get; set; }
+
+        
+        
+
     }
 
     public class ResetPasswordViewModel

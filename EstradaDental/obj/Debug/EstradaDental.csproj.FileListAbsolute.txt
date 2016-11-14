@@ -139,3 +139,4 @@ C:\Users\Angel\Desktop\estradadental\EstradaDental\obj\Debug\EstradaDental.pdb
 C:\Users\Angel\Desktop\estradadental\EstradaDental\obj\Debug\EstradaDental.Migrations.InitialCreate.resources
 C:\Users\Angel\Desktop\estradadental\EstradaDental\obj\Debug\EstradaDental.csproj.GenerateResource.Cache
 C:\Users\Angel\Desktop\estradadental\EstradaDental\obj\Debug\EstradaDental.Migrations.InitialCreate1.resources
+C:\Users\Angel\Desktop\estradadental\EstradaDental\obj\Debug\EstradaDental.Migrations.migradonaltrump.resources

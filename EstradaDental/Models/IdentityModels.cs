@@ -3,6 +3,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using System.Collections.Generic;
 
 namespace EstradaDental.Models
 {
@@ -16,6 +17,18 @@ namespace EstradaDental.Models
             // Add custom user claims here
             return userIdentity;
         }
+
+        public int clienteID { get; set; }
+         public string nombre { get; set; }
+        public string apellidoP { get; set; }
+        public string direccion { get; set; }
+        public int telefono { get; set; }
+
+        //Un cliente tiene muchas Citas
+        virtual public ICollection<Cita> cita { get; set; }
+
+        //Un cliente tiene muchos historiales
+        virtual public ICollection<Historial> historiales { get; set; }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>

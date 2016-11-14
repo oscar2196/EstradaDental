@@ -6,7 +6,7 @@ using System.Web;
 
 namespace EstradaDental.Models
 {
-    public class Cliente
+    public class Cliente 
     {
         public int clienteID { get; set; }
         //[Required]
