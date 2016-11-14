@@ -17,8 +17,7 @@ namespace EstradaDental.Controllers
         // GET: Historials
         public ActionResult Index()
         {
-            var historial = db.historial.Include(h => h.cliente);
-            return View(historial.ToList());
+            return View(db.historial.ToList());
         }
 
         // GET: Historials/Details/5
@@ -37,10 +36,8 @@ namespace EstradaDental.Controllers
         }
 
         // GET: Historials/Create
-        public ActionResult Create(int id)
+        public ActionResult Create()
         {
-
-            ViewBag.clienteID = new SelectList(db.cliente, "clienteID", "nombre");
             return View();
         }
 
@@ -58,7 +55,6 @@ namespace EstradaDental.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.clienteID = new SelectList(db.cliente, "clienteID", "nombre", historial.clienteID);
             return View(historial);
         }
 
@@ -74,7 +70,6 @@ namespace EstradaDental.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.clienteID = new SelectList(db.cliente, "clienteID", "nombre", historial.clienteID);
             return View(historial);
         }
 
@@ -91,7 +86,6 @@ namespace EstradaDental.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.clienteID = new SelectList(db.cliente, "clienteID", "nombre", historial.clienteID);
             return View(historial);
         }
 

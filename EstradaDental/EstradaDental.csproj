@@ -169,7 +169,6 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CitasController.cs" />
-    <Compile Include="Controllers\ClientesController.cs" />
     <Compile Include="Controllers\DoctoresController.cs" />
     <Compile Include="Controllers\HistorialsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -189,10 +188,17 @@
     <Compile Include="Migrations\201611141534159_migra-donaltrump.Designer.cs">
       <DependentUpon>201611141534159_migra-donaltrump.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611141642233_delateClientes.cs" />
+    <Compile Include="Migrations\201611141642233_delateClientes.Designer.cs">
+      <DependentUpon>201611141642233_delateClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611141654156_clientenew.cs" />
+    <Compile Include="Migrations\201611141654156_clientenew.Designer.cs">
+      <DependentUpon>201611141654156_clientenew.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Cita.cs" />
-    <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Doctor.cs" />
     <Compile Include="Models\Historial.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -255,29 +261,21 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Historials\Create.cshtml" />
-    <Content Include="Views\Historials\Delete.cshtml" />
-    <Content Include="Views\Historials\Details.cshtml" />
-    <Content Include="Views\Historials\Edit.cshtml" />
-    <Content Include="Views\Historials\Index.cshtml" />
     <Content Include="Views\Doctores\Create.cshtml" />
     <Content Include="Views\Doctores\Delete.cshtml" />
     <Content Include="Views\Doctores\Details.cshtml" />
     <Content Include="Views\Doctores\Edit.cshtml" />
     <Content Include="Views\Doctores\Index.cshtml" />
-    <Content Include="Views\Clientes\Create.cshtml" />
-    <Content Include="Views\Clientes\Delete.cshtml" />
-    <Content Include="Views\Clientes\Details.cshtml" />
-    <Content Include="Views\Clientes\Edit.cshtml" />
     <Content Include="Views\Citas\Create.cshtml" />
     <Content Include="Views\Citas\Delete.cshtml" />
     <Content Include="Views\Citas\Details.cshtml" />
     <Content Include="Views\Citas\Edit.cshtml" />
     <Content Include="Views\Citas\Index.cshtml" />
-    <Content Include="Views\Clientes\ListadoClientes.cshtml" />
-    <Content Include="Views\Clientes\Index.cshtml" />
-    <Content Include="Views\Historials\Create_Partial.cshtml" />
-    <Content Include="Views\Historials\List_Partial.cshtml" />
+    <Content Include="Views\Historials\Create.cshtml" />
+    <Content Include="Views\Historials\Delete.cshtml" />
+    <Content Include="Views\Historials\Details.cshtml" />
+    <Content Include="Views\Historials\Edit.cshtml" />
+    <Content Include="Views\Historials\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -299,6 +297,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201611141534159_migra-donaltrump.resx">
       <DependentUpon>201611141534159_migra-donaltrump.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611141642233_delateClientes.resx">
+      <DependentUpon>201611141642233_delateClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611141654156_clientenew.resx">
+      <DependentUpon>201611141654156_clientenew.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -33,7 +33,7 @@ namespace EstradaDental.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        public DbSet<Cliente> cliente { get; set; }
+        
         public DbSet<Cita> cita { get; set; }
         public DbSet<Doctor> doctor { get; set; }
         public DbSet<Historial> historial { get; set; }

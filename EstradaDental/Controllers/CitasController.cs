@@ -17,8 +17,7 @@ namespace EstradaDental.Controllers
         // GET: Citas
         public ActionResult Index()
         {
-
-            var cita = db.cita.Include(c => c.cliente).Include(c => c.doctor);
+            var cita = db.cita.Include(c => c.doctor);
             return View(cita.ToList());
         }
 
@@ -38,9 +37,8 @@ namespace EstradaDental.Controllers
         }
 
         // GET: Citas/Create
-        public ActionResult Create(int id)
+        public ActionResult Create()
         {
-            ViewBag.clienteID = new SelectList(db.cliente, "clienteID", "nombre");
             ViewBag.doctorID = new SelectList(db.doctor, "doctorID", "nombre");
             return View();
         }
@@ -59,7 +57,6 @@ namespace EstradaDental.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.clienteID = new SelectList(db.cliente, "clienteID", "nombre", cita.clienteID);
             ViewBag.doctorID = new SelectList(db.doctor, "doctorID", "nombre", cita.doctorID);
             return View(cita);
         }
@@ -76,7 +73,6 @@ namespace EstradaDental.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.clienteID = new SelectList(db.cliente, "clienteID", "nombre", cita.clienteID);
             ViewBag.doctorID = new SelectList(db.doctor, "doctorID", "nombre", cita.doctorID);
             return View(cita);
         }
@@ -94,7 +90,6 @@ namespace EstradaDental.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.clienteID = new SelectList(db.cliente, "clienteID", "nombre", cita.clienteID);
             ViewBag.doctorID = new SelectList(db.doctor, "doctorID", "nombre", cita.doctorID);
             return View(cita);
         }

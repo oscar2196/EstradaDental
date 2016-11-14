@@ -18,7 +18,7 @@ namespace EstradaDental.Models
 
 
         public int clienteID { get; set; }
-        virtual public Cliente cliente { get; set; }
+        virtual public ApplicationUser cliente { get; set; }
 
     }
 }

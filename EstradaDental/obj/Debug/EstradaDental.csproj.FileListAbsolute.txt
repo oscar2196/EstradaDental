@@ -133,10 +133,11 @@ C:\Users\Angel\Desktop\estradadental\EstradaDental\bin\Microsoft.Owin.Security.O
 C:\Users\Angel\Desktop\estradadental\EstradaDental\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\Angel\Desktop\estradadental\EstradaDental\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\Angel\Desktop\estradadental\EstradaDental\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\Angel\Desktop\estradadental\EstradaDental\obj\Debug\EstradaDental.csprojResolveAssemblyReference.cache
 C:\Users\Angel\Desktop\estradadental\EstradaDental\obj\Debug\EstradaDental.dll
 C:\Users\Angel\Desktop\estradadental\EstradaDental\obj\Debug\EstradaDental.pdb
 C:\Users\Angel\Desktop\estradadental\EstradaDental\obj\Debug\EstradaDental.Migrations.InitialCreate.resources
 C:\Users\Angel\Desktop\estradadental\EstradaDental\obj\Debug\EstradaDental.csproj.GenerateResource.Cache
 C:\Users\Angel\Desktop\estradadental\EstradaDental\obj\Debug\EstradaDental.Migrations.InitialCreate1.resources
 C:\Users\Angel\Desktop\estradadental\EstradaDental\obj\Debug\EstradaDental.Migrations.migradonaltrump.resources
+C:\Users\Angel\Desktop\estradadental\EstradaDental\obj\Debug\EstradaDental.Migrations.delateClientes.resources
+C:\Users\Angel\Desktop\estradadental\EstradaDental\obj\Debug\EstradaDental.Migrations.clientenew.resources
