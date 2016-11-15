@@ -141,3 +141,4 @@ C:\Users\Angel\Desktop\estradadental\EstradaDental\obj\Debug\EstradaDental.Migra
 C:\Users\Angel\Desktop\estradadental\EstradaDental\obj\Debug\EstradaDental.Migrations.migradonaltrump.resources
 C:\Users\Angel\Desktop\estradadental\EstradaDental\obj\Debug\EstradaDental.Migrations.delateClientes.resources
 C:\Users\Angel\Desktop\estradadental\EstradaDental\obj\Debug\EstradaDental.Migrations.clientenew.resources
+C:\Users\Angel\Desktop\estradadental\EstradaDental\obj\Debug\EstradaDental.Migrations.borradoClienteid.resources

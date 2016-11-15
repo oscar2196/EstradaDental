@@ -80,7 +80,7 @@ namespace EstradaDental.Models
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
 
-        public int clienteID { get; set; }
+       
         //[Required]
         [Display(Name = "Name")]
         public string nombre { get; set; }
