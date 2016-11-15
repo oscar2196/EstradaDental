@@ -1,22 +1,40 @@
-﻿@{
-    ViewBag.Title = "Contact";
-}
-<h2>@ViewBag.Title.</h2>
+﻿@*@{
+        ViewBag.Title = "Contact";
+    }*@
+<h2>@ViewBag.Title</h2>
 <h3>@ViewBag.Message</h3>
 
-<address>
-
-    <p>Revolucion
+<h1>
+    Contact Us
+    Do you want to make an appointment
+</h1>
+<div class="element googlemap-element">
+    <iframe width="100" height="100" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBUtDW2kgUk1rCKcVwjQKecQIh7NwsTz-M&q=31.33072 -113.53748&zoom=16" frameborder="0" @*style="border:0"*@></iframe>
+</div>
+<div>
+    <fieldset>
+        <legend>Address: </legend>
+        Revolución
         #160 local A
         Puerto Penasco, Sonora
         Mexico
-        </p><br />
+    </fieldset>
+    <br />
+    <fieldset>
+        <legend>Phone Number:</legend>
+        From USA Dial: 011 52 (638) 3835652
+        Cell: 011 521(638) 1120357
+        U.S (602) 7744494
+    </fieldset>
+    <br />
+    <fieldset>
+        <legend>Email:</legend>
+        ddsabe@hotmail.com
+    </fieldset>
+</div>
 
-    <abbr title="Phone">Phone:</abbr>
-    From USA 011 52 638.383..5652<br />
-    In Mexico 383.5652<br />
-   
-</address>
+
+
 
 <address>
     <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
