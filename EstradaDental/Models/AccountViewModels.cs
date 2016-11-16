@@ -97,8 +97,10 @@ namespace EstradaDental.Models
         [Display(Name = "Number phone")]
         public int telefono { get; set; }
 
-        
-        
+        //[Required]
+        [Display(Name = "Rol")]
+        public string rol { get; set; }
+
 
     }
 
