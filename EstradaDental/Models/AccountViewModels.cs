@@ -93,9 +93,9 @@ namespace EstradaDental.Models
         [Display(Name = "Address")]
         public string direccion { get; set; }
 
-        //[Required]
+       // [Required]
         [Display(Name = "Number phone")]
-        public int telefono { get; set; }
+        public string telefono { get; set; }
 
         //[Required]
         [Display(Name = "Rol")]

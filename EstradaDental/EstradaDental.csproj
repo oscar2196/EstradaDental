@@ -200,6 +200,10 @@
     <Compile Include="Migrations\201611151513120_borradoClienteid.Designer.cs">
       <DependentUpon>201611151513120_borradoClienteid.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611172035108_phone.cs" />
+    <Compile Include="Migrations\201611172035108_phone.Designer.cs">
+      <DependentUpon>201611172035108_phone.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Cita.cs" />
@@ -311,6 +315,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201611151513120_borradoClienteid.resx">
       <DependentUpon>201611151513120_borradoClienteid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611172035108_phone.resx">
+      <DependentUpon>201611172035108_phone.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

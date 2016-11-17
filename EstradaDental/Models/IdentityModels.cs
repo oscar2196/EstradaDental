@@ -19,11 +19,10 @@ namespace EstradaDental.Models
         }
 
         
-         public string nombre { get; set; }
+        public string nombre { get; set; }
         public string apellidoP { get; set; }
         public string direccion { get; set; }
-        public int telefono { get; set; }
-
+       
         //Un cliente tiene muchas Citas
         virtual public ICollection<Cita> cita { get; set; }
 
