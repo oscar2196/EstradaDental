@@ -216,6 +216,10 @@ C:\Users\mercu\Source\Repos\EstradaDental\EstradaDental\obj\Debug\EstradaDental.
 C:\Users\mercu\Source\Repos\EstradaDental\EstradaDental\obj\Debug\EstradaDental.csproj.GenerateResource.Cache
 C:\Users\mercu\Source\Repos\EstradaDental\EstradaDental\obj\Debug\EstradaDental.dll
 C:\Users\mercu\Source\Repos\EstradaDental\EstradaDental\obj\Debug\EstradaDental.pdb
+<<<<<<< HEAD
 C:\Users\Angel\Desktop\estradadental\EstradaDental\obj\Debug\EstradaDental.csprojResolveAssemblyReference.cache
 C:\Users\Angel\Desktop\estradadental\EstradaDental\obj\Debug\EstradaDental.Migrations.borradoClienteid.resources
 C:\Users\Angel\Desktop\estradadental\EstradaDental\obj\Debug\EstradaDental.Migrations.phone.resources
+=======
+C:\Users\mercu\Source\Repos\EstradaDental\EstradaDental\obj\Debug\EstradaDental.Migrations.borradoClienteid.resources
+>>>>>>> origin/master
