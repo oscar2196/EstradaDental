@@ -13,7 +13,7 @@ namespace EstradaDental.Controllers
     public class HistorialsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
-
+        [Authorize(Roles ="Admin, User")]
         // GET: Historials
         public ActionResult Index()
         {

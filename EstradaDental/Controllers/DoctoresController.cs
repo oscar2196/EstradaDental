@@ -14,6 +14,7 @@ namespace EstradaDental.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
+        [Authorize(Roles = "Admin")]
         // GET: Doctores
         public ActionResult Index()
         {

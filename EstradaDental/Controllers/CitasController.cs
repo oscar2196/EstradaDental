@@ -81,6 +81,7 @@ namespace EstradaDental.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [Authorize(Roles ="Admin , User")]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "citaID,confirmacion,fechaIn,fechaOut,doctorID,clienteID,comentario")] Cita cita)
         {
@@ -95,6 +96,7 @@ namespace EstradaDental.Controllers
         }
 
         // GET: Citas/Delete/5
+        [Authorize(Roles ="Admin")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
