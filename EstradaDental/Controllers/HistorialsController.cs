@@ -21,6 +21,7 @@ namespace EstradaDental.Controllers
         }
 
         // GET: Historials/Details/5
+        [Authorize(Roles = "Admin, User")]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -36,6 +37,7 @@ namespace EstradaDental.Controllers
         }
 
         // GET: Historials/Create
+        [Authorize(Roles ="Admin, User")]
         public ActionResult Create()
         {
             return View();
@@ -45,6 +47,7 @@ namespace EstradaDental.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [Authorize(Roles = "Admin, User")]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "historialID,comentario,fecha,clienteID")] Historial historial)
         {
@@ -59,6 +62,7 @@ namespace EstradaDental.Controllers
         }
 
         // GET: Historials/Edit/5
+        [Authorize(Roles = "Admin, User")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -77,6 +81,7 @@ namespace EstradaDental.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [Authorize(Roles = "Admin, User")]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "historialID,comentario,fecha,clienteID")] Historial historial)
         {
@@ -90,6 +95,7 @@ namespace EstradaDental.Controllers
         }
 
         // GET: Historials/Delete/5
+        [Authorize(Roles = "Admin")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -106,6 +112,7 @@ namespace EstradaDental.Controllers
 
         // POST: Historials/Delete/5
         [HttpPost, ActionName("Delete")]
+        [Authorize(Roles = "Admin")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
