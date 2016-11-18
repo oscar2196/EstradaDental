@@ -41,7 +41,8 @@
                 </div>
             </div>
 </fieldset>
-    <fieldset>
+  
+    <fieldset id="fscliente">
         <legend>Client</legend>
         <div class="form-group">
             @Html.LabelFor(model => model.nombre, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -84,4 +85,25 @@
 
             @section Scripts {
                 @Scripts.Render("~/bundles/jqueryval")
+                <script>
+                    $('#rol').change(function () {
+                       
+                        
+                        //detectar q selecciono el usuario;
+                        var valorcito = $(this).find(':selected').text()
+                        //si fue profesor se aparesca el panel 
+                        if (valorcito == 'User') {
+                            //alert('esto no funciona como deveria de ser ')
+                            $('#fscliente').slideDown()
+
+
+                        }
+                        else {
+                            $('#fscliente').slideUp()
+                        }
+                        //si no desaparesca
+
+
+                    });
+                </script>
             }
