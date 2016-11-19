@@ -13,7 +13,10 @@ namespace EstradaDental.Models
 
         [Display(Name = "Please enter your dental history")]
         public string comentario { get; set; }
+
         [Display(Name ="Day and hour")]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        [DataType(DataType.Date)]
         public DateTime fecha { get; set; }
 
 
