@@ -4,7 +4,7 @@
     ViewBag.Title = "Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+@if (User.IsInRole("Admin")) { 
 <h2>Details</h2>
 
 <div>
@@ -65,3 +65,4 @@
     @Html.ActionLink("Edit", "Edit", new { id = Model.doctorID }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
+}

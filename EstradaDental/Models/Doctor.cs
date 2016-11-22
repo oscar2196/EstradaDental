@@ -33,7 +33,7 @@ namespace EstradaDental.Models
 
         //[Required]
         [Display(Name ="Phone number")]
-        public int telefono { get; set; }
+        public string telefono { get; set; }
 
         //Un doctor tiene muchas citas
         virtual public ICollection<Cita> cita { get; set; }
