@@ -72,7 +72,14 @@ C:\Users\Angel\Desktop\estradadental\EstradaDental\obj\Debug\EstradaDental.Migra
 C:\Users\Angel\Desktop\estradadental\EstradaDental\obj\Debug\EstradaDental.Migrations.clientenew.resources
 C:\Users\Angel\Desktop\estradadental\EstradaDental\obj\Debug\EstradaDental.Migrations.borradoClienteid.resources
 C:\Users\Angel\Desktop\estradadental\EstradaDental\obj\Debug\EstradaDental.Migrations.phone.resources
+<<<<<<< HEAD
 C:\Users\Angel\Desktop\estradadental\EstradaDental\obj\Debug\EstradaDental.Migrations.teldoctor.resources
 C:\Users\Angel\Desktop\estradadental\EstradaDental\obj\Debug\EstradaDental.csproj.GenerateResource.Cache
 C:\Users\Angel\Desktop\estradadental\EstradaDental\obj\Debug\EstradaDental.dll
 C:\Users\Angel\Desktop\estradadental\EstradaDental\obj\Debug\EstradaDental.pdb
+=======
+=======
+C:\Users\mercu\Source\Repos\EstradaDental\EstradaDental\obj\Debug\EstradaDental.Migrations.borradoClienteid.resources
+>>>>>>> origin/master
+C:\Users\mercu\Source\Repos\EstradaDental\EstradaDental\obj\Debug\EstradaDental.Migrations.phone.resources
+>>>>>>> origin/master
