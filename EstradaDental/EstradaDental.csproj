@@ -208,6 +208,10 @@
     <Compile Include="Migrations\201611192155493_teldoctor.Designer.cs">
       <DependentUpon>201611192155493_teldoctor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611221942498_cambiouser.cs" />
+    <Compile Include="Migrations\201611221942498_cambiouser.Designer.cs">
+      <DependentUpon>201611221942498_cambiouser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Cita.cs" />
@@ -325,6 +329,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201611192155493_teldoctor.resx">
       <DependentUpon>201611192155493_teldoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611221942498_cambiouser.resx">
+      <DependentUpon>201611221942498_cambiouser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

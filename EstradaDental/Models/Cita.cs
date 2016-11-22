@@ -31,7 +31,7 @@ namespace EstradaDental.Models
         
         //[Required]
         [Display(Name = "Client name")]
-        public int clienteID { get; set; }
+        public string clienteID { get; set; }
 
         //[Required]
         [Display(Name = "Comments on the reason for the appointment")]

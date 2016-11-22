@@ -64,7 +64,6 @@ C:\Users\Angel\Desktop\estradadental\EstradaDental\bin\Microsoft.Owin.Security.O
 C:\Users\Angel\Desktop\estradadental\EstradaDental\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\Angel\Desktop\estradadental\EstradaDental\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\Angel\Desktop\estradadental\EstradaDental\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\Angel\Desktop\estradadental\EstradaDental\obj\Debug\EstradaDental.csprojResolveAssemblyReference.cache
 C:\Users\Angel\Desktop\estradadental\EstradaDental\obj\Debug\EstradaDental.Migrations.InitialCreate.resources
 C:\Users\Angel\Desktop\estradadental\EstradaDental\obj\Debug\EstradaDental.Migrations.InitialCreate1.resources
 C:\Users\Angel\Desktop\estradadental\EstradaDental\obj\Debug\EstradaDental.Migrations.migradonaltrump.resources
@@ -72,18 +71,8 @@ C:\Users\Angel\Desktop\estradadental\EstradaDental\obj\Debug\EstradaDental.Migra
 C:\Users\Angel\Desktop\estradadental\EstradaDental\obj\Debug\EstradaDental.Migrations.clientenew.resources
 C:\Users\Angel\Desktop\estradadental\EstradaDental\obj\Debug\EstradaDental.Migrations.borradoClienteid.resources
 C:\Users\Angel\Desktop\estradadental\EstradaDental\obj\Debug\EstradaDental.Migrations.phone.resources
-<<<<<<< HEAD
 C:\Users\Angel\Desktop\estradadental\EstradaDental\obj\Debug\EstradaDental.Migrations.teldoctor.resources
 C:\Users\Angel\Desktop\estradadental\EstradaDental\obj\Debug\EstradaDental.csproj.GenerateResource.Cache
 C:\Users\Angel\Desktop\estradadental\EstradaDental\obj\Debug\EstradaDental.dll
 C:\Users\Angel\Desktop\estradadental\EstradaDental\obj\Debug\EstradaDental.pdb
-=======
-=======
-C:\Users\mercu\Source\Repos\EstradaDental\EstradaDental\obj\Debug\EstradaDental.Migrations.borradoClienteid.resources
->>>>>>> origin/master
-C:\Users\mercu\Source\Repos\EstradaDental\EstradaDental\obj\Debug\EstradaDental.Migrations.phone.resources
-<<<<<<< HEAD
-C:\Users\mercu\Source\Repos\EstradaDental\EstradaDental\obj\Debug\EstradaDental.Migrations.teldoctor.resources
-=======
->>>>>>> origin/master
->>>>>>> origin/master
+C:\Users\Angel\Desktop\estradadental\EstradaDental\obj\Debug\EstradaDental.Migrations.cambiouser.resources

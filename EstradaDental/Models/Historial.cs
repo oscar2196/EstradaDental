@@ -20,8 +20,8 @@ namespace EstradaDental.Models
         public DateTime fecha { get; set; }
 
 
-        public int clienteID { get; set; }
-        virtual public ApplicationUser cliente { get; set; }
+        public string clienteID { get; set; }
+        virtual public ApplicationUser clientes { get; set; }
 
     }
 }
