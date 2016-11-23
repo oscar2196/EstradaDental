@@ -282,6 +282,7 @@
     <Content Include="Views\Doctores\Details.cshtml" />
     <Content Include="Views\Doctores\Edit.cshtml" />
     <Content Include="Views\Doctores\Index.cshtml" />
+    <Content Include="Views\Home\OurTeam.cshtml" />
     <Content Include="Views\Citas\Create.cshtml" />
     <Content Include="Views\Citas\Delete.cshtml" />
     <Content Include="Views\Citas\Details.cshtml" />
@@ -292,7 +293,6 @@
     <Content Include="Views\Historials\Details.cshtml" />
     <Content Include="Views\Historials\Edit.cshtml" />
     <Content Include="Views\Historials\Index.cshtml" />
-    <Content Include="Views\Home\OurTeam.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -4,8 +4,7 @@
     ViewBag.Title = "Delete";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-@if (User.IsInRole("Admin") || User.IsInRole("User"))
-{
+
 <h2>Delete</h2>
 
 <h3>Are you sure you want to delete this?</h3>
@@ -39,8 +38,7 @@
 
     </dl>
 
-    @using (Html.BeginForm())
-    {
+    @using (Html.BeginForm()) {
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
@@ -49,4 +47,3 @@
         </div>
     }
 </div>
-}

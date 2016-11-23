@@ -76,3 +76,4 @@ C:\Users\Angel\Desktop\estradadental\EstradaDental\obj\Debug\EstradaDental.cspro
 C:\Users\Angel\Desktop\estradadental\EstradaDental\obj\Debug\EstradaDental.dll
 C:\Users\Angel\Desktop\estradadental\EstradaDental\obj\Debug\EstradaDental.pdb
 C:\Users\Angel\Desktop\estradadental\EstradaDental\obj\Debug\EstradaDental.Migrations.cambiouser.resources
+C:\Users\Angel\Desktop\estradadental\EstradaDental\obj\Debug\EstradaDental.csprojResolveAssemblyReference.cache
