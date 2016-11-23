@@ -293,11 +293,10 @@
     <Content Include="Views\Historials\Details.cshtml" />
     <Content Include="Views\Historials\Edit.cshtml" />
     <Content Include="Views\Historials\Index.cshtml" />
-<<<<<<< HEAD
+
     <Content Include="Views\Home\OurTeam.cshtml" />
     <Content Include="Views\Account\index.cshtml" />
-=======
->>>>>>> origin/master
+
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
