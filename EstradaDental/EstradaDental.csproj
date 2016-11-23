@@ -253,7 +253,6 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Manage\Shared\Error.cshtml" />
-    <Content Include="Views\Manage\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
@@ -293,10 +292,9 @@
     <Content Include="Views\Historials\Details.cshtml" />
     <Content Include="Views\Historials\Edit.cshtml" />
     <Content Include="Views\Historials\Index.cshtml" />
-
     <Content Include="Views\Home\OurTeam.cshtml" />
     <Content Include="Views\Account\index.cshtml" />
-
+    <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
