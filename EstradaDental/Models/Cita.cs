@@ -31,7 +31,7 @@ namespace EstradaDental.Models
         
         //[Required]
         [Display(Name = "Client name")]
-        public int clienteID { get; set; }
+        public string clienteID { get; set; }
 
         //[Required]
         [Display(Name = "Comments on the reason for the appointment")]
@@ -40,7 +40,6 @@ namespace EstradaDental.Models
 
 
         //Una cita tiene un cliente
-
         virtual public ApplicationUser cliente { get; set; }
         //Una cita tiene un dentista
         virtual public Doctor doctor { get; set; }

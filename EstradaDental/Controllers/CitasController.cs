@@ -15,15 +15,13 @@ namespace EstradaDental.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Citas
-        [Authorize(Roles = "Admin, User")]
         public ActionResult Index()
         {
-            var cita = db.cita.Include(c => c.doctor);
+            var cita = db.cita.Include(c => c.cliente).Include(c => c.doctor);
             return View(cita.ToList());
         }
 
         // GET: Citas/Details/5
-        [Authorize(Roles ="Admin, User")]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -39,9 +37,10 @@ namespace EstradaDental.Controllers
         }
 
         // GET: Citas/Create
-        [Authorize(Roles ="Admin, User")]
         public ActionResult Create()
         {
+
+            ViewBag.clienteID = new SelectList(db.Users, "Id", "nombre");
             ViewBag.doctorID = new SelectList(db.doctor, "doctorID", "nombre");
             return View();
         }
@@ -50,7 +49,6 @@ namespace EstradaDental.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [Authorize(Roles = "Admin, User")]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "citaID,confirmacion,fechaIn,fechaOut,doctorID,clienteID,comentario")] Cita cita)
         {
@@ -61,12 +59,12 @@ namespace EstradaDental.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.clienteID = new SelectList(db.Users, "Id", "nombre", cita.clienteID);
             ViewBag.doctorID = new SelectList(db.doctor, "doctorID", "nombre", cita.doctorID);
             return View(cita);
         }
 
         // GET: Citas/Edit/5
-        [Authorize(Roles = "Admin, User")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -78,6 +76,7 @@ namespace EstradaDental.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.clienteID = new SelectList(db.Users, "Id", "nombre", cita.clienteID);
             ViewBag.doctorID = new SelectList(db.doctor, "doctorID", "nombre", cita.doctorID);
             return View(cita);
         }
@@ -86,7 +85,6 @@ namespace EstradaDental.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [Authorize(Roles ="Admin , User")]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "citaID,confirmacion,fechaIn,fechaOut,doctorID,clienteID,comentario")] Cita cita)
         {
@@ -96,12 +94,12 @@ namespace EstradaDental.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.clienteID = new SelectList(db.Users, "Id", "nombre", cita.clienteID);
             ViewBag.doctorID = new SelectList(db.doctor, "doctorID", "nombre", cita.doctorID);
             return View(cita);
         }
 
         // GET: Citas/Delete/5
-        [Authorize(Roles ="Admin")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -118,7 +116,6 @@ namespace EstradaDental.Controllers
 
         // POST: Citas/Delete/5
         [HttpPost, ActionName("Delete")]
-        [Authorize(Roles = "Admin")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {

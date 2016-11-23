@@ -4,8 +4,6 @@
     ViewBag.Title = "Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-@if (User.IsInRole("Admin") || User.IsInRole("User"))
-{
 
 <h2>Details</h2>
 
@@ -43,4 +41,3 @@
     @Html.ActionLink("Edit", "Edit", new { id = Model.historialID }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
-}
