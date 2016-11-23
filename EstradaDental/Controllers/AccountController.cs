@@ -17,7 +17,7 @@ namespace EstradaDental.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
-
+        //ApplicationDbContext db = new ApplicationDbContext();
         public AccountController()
         {
         }
@@ -51,6 +51,15 @@ namespace EstradaDental.Controllers
                 _userManager = value;
             }
         }
+
+
+        public ActionResult index()
+        {
+            var todosLosUsuarios = UserManager.Users.ToList();
+            return View(todosLosUsuarios);
+        }
+
+
 
         //
         // GET: /Account/Login
