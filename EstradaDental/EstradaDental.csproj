@@ -289,6 +289,7 @@
     <Content Include="Views\Historials\Edit.cshtml" />
     <Content Include="Views\Historials\Index.cshtml" />
     <Content Include="Views\Home\OurTeam.cshtml" />
+    <Content Include="Views\Account\index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

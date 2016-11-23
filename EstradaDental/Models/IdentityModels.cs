@@ -17,8 +17,7 @@ namespace EstradaDental.Models
             // Add custom user claims here
             return userIdentity;
         }
-
-        
+       
         public string nombre { get; set; }
         public string apellidoP { get; set; }
         public string direccion { get; set; }
@@ -48,5 +47,7 @@ namespace EstradaDental.Models
 
         
         }
+
+       // public System.Data.Entity.DbSet<EstradaDental.Models.ApplicationUser> ApplicationUsers { get; set; }
     }
 }
