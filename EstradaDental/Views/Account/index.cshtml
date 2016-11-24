@@ -1,11 +1,11 @@
-﻿@model IEnumerable<EstradaDental.Models.ApplicationUser>
+﻿@model IEnumerable<EstradaDental.ViewModels.VMUserRoleName>
 
 @{
-    ViewBag.Title = "index";
+    ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>index</h2>
+<h2>Index</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -13,46 +13,13 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.nombre)
+            @Html.DisplayNameFor(model => model.nombreCompleto)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.apellidoP)
+            @Html.DisplayNameFor(model => model.email)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.direccion)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Email)
-        </th>
-        @*th>
-            @Html.DisplayNameFor(model => model.EmailConfirmed)
-        </th>*@
-        @*<th>
-            @Html.DisplayNameFor(model => model.PasswordHash)
-        </th>*@
-        @*<th>
-            @Html.DisplayNameFor(model => model.SecurityStamp)
-        </th>*@
-        @*<th>
-            @Html.DisplayNameFor(model => model.PhoneNumber)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PhoneNumberConfirmed)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TwoFactorEnabled)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LockoutEndDateUtc)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LockoutEnabled)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AccessFailedCount)
-        </th>*@
-        <th>
-            @Html.DisplayNameFor(model => model.UserName)
+            @Html.DisplayNameFor(model => model.rolID)
         </th>
         <th></th>
     </tr>
@@ -60,45 +27,13 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.nombre)
+            @Html.DisplayFor(modelItem => item.nombreCompleto)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.apellidoP)
+            @Html.DisplayFor(modelItem => item.email)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.direccion)
-        </td>
-        
-        @*<td>
-        @Html.DisplayFor(modelItem => item.EmailConfirmed)
-    </td>*@
-     
-        @*<td>
-            @Html.DisplayFor(modelItem => item.PasswordHash)
-        </td*@>
-        @*<td>
-            @Html.DisplayFor(modelItem => item.SecurityStamp)
-        </td>*@
-        <td>
-            @Html.DisplayFor(modelItem => item.PhoneNumber)
-        </td>
-        @*<td>
-            @Html.DisplayFor(modelItem => item.PhoneNumberConfirmed)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TwoFactorEnabled)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LockoutEndDateUtc)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LockoutEnabled)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AccessFailedCount)*@
-        @*</td>*@
-        <td>
-            @Html.DisplayFor(modelItem => item.UserName)
+            @Html.DisplayFor(modelItem => item.rolID)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
