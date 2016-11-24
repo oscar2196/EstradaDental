@@ -29,6 +29,12 @@
             @Html.LabelFor(model => model.fechaIn, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.fechaIn, new { htmlAttributes = new { @class = "form-control" } })
+                <!--<div class='input-group date' id='datetimepicker6'>
+                    <input type='text' class="form-control" name="fechaIn" id="fechaIn" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>-->
                 @Html.ValidationMessageFor(model => model.fechaIn, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -36,7 +42,17 @@
         <div class="form-group">
             @Html.LabelFor(model => model.fechaOut, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.fechaOut, new { htmlAttributes = new { @class = "form-control" } })
+               @Html.EditorFor(model => model.fechaOut, new { htmlAttributes = new { @class = "form-control" } })
+                
+                    <!--
+                        <div class='input-group date' id='datetimepicker7'>
+                            <input type='text' class="form-control" name="fechaOut" id="fechaOut" />
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>-->
+                    
+                
                 @Html.ValidationMessageFor(model => model.fechaOut, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -76,3 +92,20 @@
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
+@*@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+<script type="text/javascript">
+    $(function () {
+        $('#datetimepicker6').datetimepicker();
+        $('#datetimepicker7').datetimepicker({
+            useCurrent: false //Important! See issue #1075
+        });
+        $("#datetimepicker6").on("dp.change", function (e) {
+            $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
+        });
+        $("#datetimepicker7").on("dp.change", function (e) {
+            $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
+        });
+    });
+</script>
+    }*@
