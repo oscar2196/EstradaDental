@@ -52,15 +52,13 @@ namespace EstradaDental.Controllers
             }
         }
 
-
+        [Authorize(Roles ="Admin")]
         public ActionResult index()
         {
             var todosLosUsuarios = UserManager.Users.ToList();
+            var vuser = from usr in todosLosUsuarios select new ViewModels.VMUserRoleName();
             return View(todosLosUsuarios);
         }
-
-
-
         //
         // GET: /Account/Login
         [AllowAnonymous]
