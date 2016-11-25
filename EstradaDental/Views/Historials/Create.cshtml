@@ -4,6 +4,14 @@
     ViewBag.Title = "Create";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+    <div>
+        <p>Name: </p> @Html.DisplayNameFor(model => model.clientes.nombre)
+        <p>Addres: </p> @Html.DisplayNameFor(model => model.clientes.direccion)
+        <p>In case of emergency, call: </p> <input type="text" />
+        <p>Relationship: </p> <input type="text" />
+        <p>Phone number: </p><input type="text"/>
+        <p>Reason for consultation: </p> <input type="text" />
+    </div>
 
 <fieldset>
    <legend>Medical History</legend>

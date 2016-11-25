@@ -150,8 +150,9 @@ namespace EstradaDental.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-        [Authorize(Roles = "Admin")]
 
+
+        [Authorize(Roles = "Admin")]
         // GET: Citas/editarA/5
         public ActionResult editarA(int? id)
         {
