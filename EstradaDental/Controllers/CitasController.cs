@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using EstradaDental.Models;
+using Microsoft.AspNet.Identity;
 
 namespace EstradaDental.Controllers
 {
@@ -15,12 +16,31 @@ namespace EstradaDental.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Citas
-        public ActionResult Index()
+        [Authorize(Roles = "Admin")]
+        public ActionResult citas()
         {
             var cita = db.cita.Include(c => c.cliente).Include(c => c.doctor);
             return View(cita.ToList());
         }
 
+        // GET: Citas/index/
+        [Authorize(Roles = "User")]
+        public ActionResult Index()
+        {
+            string id = User.Identity.GetUserId();
+            var resBusqueda = new List<Cita>();
+            if (!string.IsNullOrEmpty(id))
+            {
+                resBusqueda = db.cita.Where(a => a.clienteID.Contains(id)).ToList();
+            }
+            else
+            {
+                resBusqueda = db.cita.ToList();
+            }
+           
+            return View(resBusqueda);
+        }
+        [Authorize(Roles = "User, Admin")]
         // GET: Citas/Details/5
         public ActionResult Details(int? id)
         {
@@ -35,7 +55,7 @@ namespace EstradaDental.Controllers
             }
             return View(cita);
         }
-
+        [Authorize(Roles = "User")]
         // GET: Citas/Create
         public ActionResult Create()
         {
@@ -49,11 +69,14 @@ namespace EstradaDental.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [Authorize(Roles = "User")]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "citaID,confirmacion,fechaIn,fechaOut,doctorID,clienteID,comentario")] Cita cita)
         {
             if (ModelState.IsValid)
             {
+                cita.clienteID = User.Identity.GetUserId();
+                //cita.confirmacion = false;
                 db.cita.Add(cita);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -63,7 +86,7 @@ namespace EstradaDental.Controllers
             ViewBag.doctorID = new SelectList(db.doctor, "doctorID", "nombre", cita.doctorID);
             return View(cita);
         }
-
+        [Authorize(Roles = "User, Admin")]
         // GET: Citas/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -84,12 +107,15 @@ namespace EstradaDental.Controllers
         // POST: Citas/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize(Roles = "User, Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "citaID,confirmacion,fechaIn,fechaOut,doctorID,clienteID,comentario")] Cita cita)
         {
             if (ModelState.IsValid)
             {
+                cita.clienteID = User.Identity.GetUserId();
+                cita.confirmacion = false;
                 db.Entry(cita).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -98,7 +124,7 @@ namespace EstradaDental.Controllers
             ViewBag.doctorID = new SelectList(db.doctor, "doctorID", "nombre", cita.doctorID);
             return View(cita);
         }
-
+        [Authorize(Roles = "User, Admin")]
         // GET: Citas/Delete/5
         public ActionResult Delete(int? id)
         {
@@ -113,7 +139,7 @@ namespace EstradaDental.Controllers
             }
             return View(cita);
         }
-
+        [Authorize(Roles = "User, Admin")]
         // POST: Citas/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
@@ -124,7 +150,45 @@ namespace EstradaDental.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+        [Authorize(Roles = "Admin")]
 
+        // GET: Citas/editarA/5
+        public ActionResult editarA(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Cita cita = db.cita.Find(id);
+            if (cita == null)
+            {
+                return HttpNotFound();
+            }
+            ViewBag.clienteID = new SelectList(db.Users, "Id", "nombre", cita.clienteID);
+            ViewBag.doctorID = new SelectList(db.doctor, "doctorID", "nombre", cita.doctorID);
+            return View(cita);
+        }
+
+        // POST: Citas/editarA/5
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize(Roles = "Admin")]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult editarA([Bind(Include = "citaID,confirmacion,fechaIn,fechaOut,doctorID,clienteID,comentario")] Cita cita)
+        {
+            if (ModelState.IsValid)
+            {
+                //cita.clienteID = User.Identity.GetUserId();
+                //cita.confirmacion = false;
+                db.Entry(cita).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            ViewBag.clienteID = new SelectList(db.Users, "Id", "nombre", cita.clienteID);
+            ViewBag.doctorID = new SelectList(db.doctor, "doctorID", "nombre", cita.doctorID);
+            return View(cita);
+        }
         protected override void Dispose(bool disposing)
         {
             if (disposing)
