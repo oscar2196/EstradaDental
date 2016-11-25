@@ -283,15 +283,12 @@
     <Content Include="Views\Manage\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Doctores\Create.cshtml" />
     <Content Include="Views\Doctores\Delete.cshtml" />
-    <Content Include="Views\Doctores\Details.cshtml" />
     <Content Include="Views\Doctores\Edit.cshtml" />
     <Content Include="Views\Doctores\Index.cshtml" />
     <Content Include="Views\Home\OurTeam.cshtml" />
     <Content Include="Views\Citas\Create.cshtml" />
     <Content Include="Views\Citas\Delete.cshtml" />
-    <Content Include="Views\Citas\Details.cshtml" />
     <Content Include="Views\Citas\Edit.cshtml" />
-    <Content Include="Views\Citas\Index.cshtml" />
     <Content Include="Views\Historials\Create.cshtml" />
     <Content Include="Views\Historials\Delete.cshtml" />
     <Content Include="Views\Historials\Details.cshtml" />
@@ -300,6 +297,10 @@
     <Content Include="Views\Home\OurTeam.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Account\Index.cshtml" />
+    <Content Include="Views\Citas\citas.cshtml" />
+    <Content Include="Views\Citas\Index.cshtml" />
+    <Content Include="Views\Citas\Details.cshtml" />
+    <Content Include="Views\Citas\editarA.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

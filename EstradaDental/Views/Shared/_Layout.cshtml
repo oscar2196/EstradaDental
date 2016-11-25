@@ -22,15 +22,20 @@
                     </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
+
                         <li>@Html.ActionLink("Home", "Index", "Home")</li>
                         <li>@Html.ActionLink("About", "About", "Home")</li>
                         <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                        <li>@Html.ActionLink("Our Team", "Our Team", "Home")</li>
-                        @if (User.IsInRole("User") || User.IsInRole("Admin"))
+                        
+                        @if (User.IsInRole("Admin"))
                         {
-                        <li>@Html.ActionLink("Dental Appointment", "Index", "Citas")</li>
-                        <li>@Html.ActionLink("Dentist", "Index", "Doctores")</li>
-                        <li>@Html.ActionLink("Medical History","Index", "Historials")</li>
+                        <li>@Html.ActionLink("Admin citas", "citas", "Citas")</li>
+                        }
+                        @if (User.IsInRole("User"))
+                        {
+                            
+                            <li>@Html.ActionLink("Dental History", "Index", "Historials")</li>                              
+                            <li>@Html.ActionLink("Dental Appointment", "Index", "Citas")</li>
                         }
 
 
