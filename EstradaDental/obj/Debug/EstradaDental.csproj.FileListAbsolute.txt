@@ -155,7 +155,6 @@ C:\Users\mercu\Source\Repos\EstradaDental\EstradaDental\obj\Debug\EstradaDental.
 C:\Users\mercu\Source\Repos\EstradaDental\EstradaDental\obj\Debug\EstradaDental.csproj.GenerateResource.Cache
 C:\Users\mercu\Source\Repos\EstradaDental\EstradaDental\obj\Debug\EstradaDental.dll
 C:\Users\mercu\Source\Repos\EstradaDental\EstradaDental\obj\Debug\EstradaDental.pdb
-C:\Users\mercu\Source\Repos\EstradaDental\EstradaDental\obj\Debug\EstradaDental.csprojResolveAssemblyReference.cache
 C:\Users\mercu\Source\Repos\EstradaDental\EstradaDental\obj\Debug\EstradaDental.Migrations.Error.resources
 C:\Users\Angel\Source\Repos\EstradaDental\EstradaDental\bin\roslyn\csc.exe
 C:\Users\Angel\Source\Repos\EstradaDental\EstradaDental\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
