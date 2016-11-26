@@ -124,7 +124,7 @@ namespace EstradaDental.Controllers
             ViewBag.doctorID = new SelectList(db.doctor, "doctorID", "nombre", cita.doctorID);
             return View(cita);
         }
-        [Authorize(Roles = "User, Admin")]
+        [Authorize(Roles = "User")]
         // GET: Citas/Delete/5
         public ActionResult Delete(int? id)
         {
@@ -139,7 +139,7 @@ namespace EstradaDental.Controllers
             }
             return View(cita);
         }
-        [Authorize(Roles = "User, Admin")]
+        [Authorize(Roles = "User")]
         // POST: Citas/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
@@ -148,7 +148,7 @@ namespace EstradaDental.Controllers
             Cita cita = db.cita.Find(id);
             db.cita.Remove(cita);
             db.SaveChanges();
-            return RedirectToAction("Index");
+           return RedirectToAction("Index");
         }
         [Authorize(Roles = "Admin")]
 
@@ -183,11 +183,37 @@ namespace EstradaDental.Controllers
                 //cita.confirmacion = false;
                 db.Entry(cita).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("citas");
             }
             ViewBag.clienteID = new SelectList(db.Users, "Id", "nombre", cita.clienteID);
             ViewBag.doctorID = new SelectList(db.doctor, "doctorID", "nombre", cita.doctorID);
             return View(cita);
+        }
+        [Authorize(Roles = "Admin")]
+        // GET: Citas/Delete/5
+        public ActionResult eliminacion(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Cita cita = db.cita.Find(id);
+            if (cita == null)
+            {
+                return HttpNotFound();
+            }
+            return View(cita);
+        }
+        [Authorize(Roles = "Admin")]
+        // POST: Citas/Delete/5
+        [HttpPost, ActionName("eliminacion")]
+        [ValidateAntiForgeryToken]
+        public ActionResult eliminacionConfirmada(int id)
+        {
+            Cita cita = db.cita.Find(id);
+            db.cita.Remove(cita);
+            db.SaveChanges();
+            return RedirectToAction("citas");
         }
         protected override void Dispose(bool disposing)
         {

@@ -52,14 +52,14 @@ namespace EstradaDental.Controllers
             }
         }
 
-        [Authorize(Roles ="Admin")]
-        public ActionResult index()
-        {
-            var todosLosUsuarios = UserManager.Users.ToList();
-            var vuser = from usr in todosLosUsuarios select new ViewModels.VMUserRoleName();
-            return View(todosLosUsuarios);
-        }
-        //
+        //[Authorize(Roles = "Admin")]
+        //public ActionResult index()
+        //{
+        //    var todosLosUsuarios = UserManager.Users.ToList();
+        //    var vuser = from usr in todosLosUsuarios select new ViewModels.VMUserRoleName();
+        //    return View(todosLosUsuarios);
+        //}
+
         // GET: /Account/Login
         [AllowAnonymous]
         public ActionResult Login(string returnUrl)
@@ -177,7 +177,7 @@ namespace EstradaDental.Controllers
                     // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                     // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
 
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Create", "HistorialClinico");
                 }
                 AddErrors(result);
             }
