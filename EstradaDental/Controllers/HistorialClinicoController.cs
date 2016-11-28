@@ -18,18 +18,13 @@ namespace EstradaDental.Controllers
         // GET: HistorialClinico
        
         // GET: HistorialClinico/Details/5
-        public ActionResult Details(int? id)
+        public ActionResult Details()
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            HistorialClinico historialClinico = db.historialclinico.Find(id);
-            if (historialClinico == null)
-            {
-                return HttpNotFound();
-            }
-            return View(historialClinico);
+            string iduser = User.Identity.GetUserId();
+            var Hist = new List<HistorialClinico>();
+           Hist= db.historialclinico.Where(a => a.clienteID == iduser).ToList();
+           
+           return View(Hist);
         }
         [Authorize(Roles = "User, Admin")]
         // GET: HistorialClinico/Create
