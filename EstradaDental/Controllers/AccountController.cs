@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using EstradaDental.Models;
+using System.Collections.Generic;
 
 namespace EstradaDental.Controllers
 {
@@ -155,14 +156,29 @@ namespace EstradaDental.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Register(RegisterViewModel model)
+        public async Task<ActionResult> Register(RegisterViewModel model,HttpPostedFileBase foto)
         {
             if (ModelState.IsValid)
             {
+                //almacenar archivo 
+                //si se subio laa fotito se creara un nuevo registro 
+                Archivo ar = new Archivo();
+                if (foto!=null && foto.ContentLength>0)
+                {
+                    
+                    ar.formatoContenido = foto.ContentType;
+                    ar.nombre = foto.FileName;
+                    ar.tipo = "Cliente";
+                    var leer = new System.IO.BinaryReader(foto.InputStream);
+                    ar.contenido = leer.ReadBytes(foto.ContentLength);
+                   
+                }
+
                 //modificar
                 var user = new ApplicationUser { UserName = model.Email, Email = model.Email,
                    nombre= model.nombre,apellidoP= model.apellidoP,
-                    direccion = model.direccion,PhoneNumber= model.telefono};
+                    direccion = model.direccion,PhoneNumber= model.telefono };
+                user.archivos = new List<Archivo> { ar };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
