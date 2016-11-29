@@ -27,6 +27,9 @@ namespace EstradaDental.Models
 
         //Un cliente tiene muchos historiales
         virtual public ICollection<Historial> historiales { get; set; }
+        virtual public ICollection<HistorialClinico> historialClinico { get; set; }
+        virtual public ICollection<Archivo> archivos { get; set; }
+
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
@@ -35,6 +38,8 @@ namespace EstradaDental.Models
         public DbSet<Cita> cita { get; set; }
         public DbSet<Doctor> doctor { get; set; }
         public DbSet<Historial> historial { get; set; }
+        public DbSet<HistorialClinico> historialclinico { get; set; }
+        public DbSet<Archivo> archivo { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
@@ -48,8 +53,6 @@ namespace EstradaDental.Models
         
         }
 
-        
-
-        // public System.Data.Entity.DbSet<EstradaDental.Models.ApplicationUser> ApplicationUsers { get; set; }
+       // public System.Data.Entity.DbSet<EstradaDental.Models.ApplicationUser> ApplicationUsers { get; set; }
     }
 }

@@ -222,7 +222,6 @@ C:\Users\Angel\Source\Repos\EstradaDental\EstradaDental\bin\Microsoft.Owin.Secur
 C:\Users\Angel\Source\Repos\EstradaDental\EstradaDental\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\Angel\Source\Repos\EstradaDental\EstradaDental\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\Angel\Source\Repos\EstradaDental\EstradaDental\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\Angel\Source\Repos\EstradaDental\EstradaDental\obj\Debug\EstradaDental.csprojResolveAssemblyReference.cache
 C:\Users\Angel\Source\Repos\EstradaDental\EstradaDental\obj\Debug\EstradaDental.Migrations.InitialCreate.resources
 C:\Users\Angel\Source\Repos\EstradaDental\EstradaDental\obj\Debug\EstradaDental.Migrations.InitialCreate1.resources
 C:\Users\Angel\Source\Repos\EstradaDental\EstradaDental\obj\Debug\EstradaDental.Migrations.migradonaltrump.resources
@@ -232,8 +231,10 @@ C:\Users\Angel\Source\Repos\EstradaDental\EstradaDental\obj\Debug\EstradaDental.
 C:\Users\Angel\Source\Repos\EstradaDental\EstradaDental\obj\Debug\EstradaDental.Migrations.phone.resources
 C:\Users\Angel\Source\Repos\EstradaDental\EstradaDental\obj\Debug\EstradaDental.Migrations.teldoctor.resources
 C:\Users\Angel\Source\Repos\EstradaDental\EstradaDental\obj\Debug\EstradaDental.Migrations.cambiouser.resources
-C:\Users\Angel\Source\Repos\EstradaDental\EstradaDental\obj\Debug\EstradaDental.Migrations.Error.resources
 C:\Users\Angel\Source\Repos\EstradaDental\EstradaDental\obj\Debug\EstradaDental.csproj.GenerateResource.Cache
 C:\Users\Angel\Source\Repos\EstradaDental\EstradaDental\obj\Debug\EstradaDental.dll
 C:\Users\Angel\Source\Repos\EstradaDental\EstradaDental\obj\Debug\EstradaDental.pdb
-C:\Users\mercu\Source\Repos\EstradaDental\EstradaDental\obj\Debug\EstradaDental.csprojResolveAssemblyReference.cache
+C:\Users\Angel\Source\Repos\EstradaDental\EstradaDental\obj\Debug\EstradaDental.Migrations.histclinico.resources
+C:\Users\Angel\Source\Repos\EstradaDental\EstradaDental\obj\Debug\EstradaDental.Migrations.HCargument.resources
+C:\Users\Angel\Source\Repos\EstradaDental\EstradaDental\obj\Debug\EstradaDental.csprojResolveAssemblyReference.cache
+C:\Users\Angel\Source\Repos\EstradaDental\EstradaDental\obj\Debug\EstradaDental.Migrations.archivo2.resources

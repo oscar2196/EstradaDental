@@ -1,0 +1,292 @@
+﻿@model EstradaDental.Models.HistorialClinico
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <fieldset>
+            <legend>Medical History</legend>
+            <div class="container">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>N</th>
+                            <th></th>
+                            <th>YES</th>
+
+                            <th></th>
+                            <th>YES</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Are you under medical treatment?</td>
+                            <td>
+                                @Html.EditorFor(model => model.pregunta1)
+                                @Html.ValidationMessageFor(model => model.pregunta1, "", new { @class = "text-danger" })
+                            </td>
+                            @*<td><input type="checkbox" value=""></td>*@
+                            <td>Do you suffer or suffered</td>
+                            <td></td>
+                            @*<td></td>*@
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Are you actually  taking antibiotic?</td>
+                            <td>
+                                @Html.EditorFor(model => model.pregunta2)
+                                @Html.ValidationMessageFor(model => model.pregunta2, "", new { @class = "text-danger" })
+                            </td>
+                            @*<td><input type="checkbox" value=""></td>*@
+                            <td>S.T.D.</td>
+                            <td>
+                                @Html.EditorFor(model => model.pregunta16)
+                                @Html.ValidationMessageFor(model => model.pregunta16, "", new { @class = "text-danger" })
+                            </td>
+                            @*<td><input type="checkbox" value=""></td>*@
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Have you had a medical surgery?</td>
+                            <td>
+                                @Html.EditorFor(model => model.pregunta3)
+                                @Html.ValidationMessageFor(model => model.pregunta3, "", new { @class = "text-danger" })
+                            </td>
+                            @*<td><input type="checkbox" value=""></td>*@
+                            <td>Heart problems</td>
+                            <td>
+                                @Html.EditorFor(model => model.pregunta17)
+                                @Html.ValidationMessageFor(model => model.pregunta17, "", new { @class = "text-danger" })
+                            </td>
+                            @*<td><input type="checkbox" value=""></td>*@
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Have you had blood transfusion?</td>
+                            <td>
+                                @Html.EditorFor(model => model.pregunta4)
+                                @Html.ValidationMessageFor(model => model.pregunta4, "", new { @class = "text-danger" })
+                            </td>
+                            @*<td><input type="checkbox" value=""></td>*@
+                            <td>Hepatitis</td>
+                            <td>
+                                @Html.EditorFor(model => model.pregunta18)
+                                @Html.ValidationMessageFor(model => model.pregunta18, "", new { @class = "text-danger" })
+                            </td>
+                            @*<td><input type="checkbox" value=""></td>*@
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Have you or taking drugs?</td>
+                            <td>
+                                @Html.EditorFor(model => model.pregunta5)
+                                @Html.ValidationMessageFor(model => model.pregunta5, "", new { @class = "text-danger" })
+                            </td>
+                            @*<td><input type="checkbox" value=""></td>*@
+                            <td>Rheumatic  fever</td>
+                            <td>
+                                @Html.EditorFor(model => model.pregunta19)
+                                @Html.ValidationMessageFor(model => model.pregunta19, "", new { @class = "text-danger" })
+                            </td>
+                            @* <td><input type="checkbox" value=""></td>*@
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Are you allergic to </td>
+                            <td></td>
+                            @*<td></td>*@
+                            <td>Asthma</td>
+                            <td>
+                                @Html.EditorFor(model => model.pregunta20)
+                                @Html.ValidationMessageFor(model => model.pregunta20, "", new { @class = "text-danger" })
+                            </td>
+                            @*<td><input type="checkbox" value=""></td>*@
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Anesthesia</td>
+                            <td>
+                                @Html.EditorFor(model => model.pregunta6)
+                                @Html.ValidationMessageFor(model => model.pregunta6, "", new { @class = "text-danger" })
+                            </td>
+                            @*<td><input type="checkbox" value=""></td>*@
+                            <td>Diabetes</td>
+                            <td>
+                                @Html.EditorFor(model => model.pregunta21)
+                                @Html.ValidationMessageFor(model => model.pregunta21, "", new { @class = "text-danger" })
+                            </td>
+                            @*<td><input type="checkbox" value=""></td>*@
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Medicine</td>
+                            <td>
+                                @Html.EditorFor(model => model.pregunta7)
+                                @Html.ValidationMessageFor(model => model.pregunta7, "", new { @class = "text-danger" })
+                            </td>
+                            @*<td><input type="checkbox" value=""></td>*@
+                            <td>Gastric ulcer</td>
+                            <td>
+                                @Html.EditorFor(model => model.pregunta22)
+                                @Html.ValidationMessageFor(model => model.pregunta22, "", new { @class = "text-danger" })
+                            </td>
+                            @*<td><input type="checkbox" value=""></td>*@
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Food</td>
+                            <td>
+                                @Html.EditorFor(model => model.pregunta8)
+                                @Html.ValidationMessageFor(model => model.pregunta8, "", new { @class = "text-danger" })
+                            </td>
+                            @*<td><input type="checkbox" value=""></td>*@
+                            <td>Thyroid</td>
+                            <td>
+                                @Html.EditorFor(model => model.pregunta23)
+                                @Html.ValidationMessageFor(model => model.pregunta23, "", new { @class = "text-danger" })
+                            </td>
+                            @*<td><input type="checkbox" value=""></td>*@
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Physical or environmental</td>
+                            <td>
+                                @Html.EditorFor(model => model.pregunta9)
+                                @Html.ValidationMessageFor(model => model.pregunta9, "", new { @class = "text-danger" })
+                            </td>
+                            @* <td><input type="checkbox" value=""></td>*@
+                            <td>Have you has any problem on opening and  closing your mouth?</td>
+                            <td>
+                                @Html.EditorFor(model => model.pregunta24)
+                                @Html.ValidationMessageFor(model => model.pregunta24, "", new { @class = "text-danger" })
+                            </td>
+                            @* <td><input type="checkbox" value=""></td>*@
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>Do you suffer high pressure or low blood?</td>
+                            <td>
+                                @Html.EditorFor(model => model.pregunta10)
+                                @Html.ValidationMessageFor(model => model.pregunta10, "", new { @class = "text-danger" })
+                            </td>
+                            @* <td><input type="checkbox" value=""></td>*@
+                            <td>Do you  hear any noise when you close your mouth?</td>
+                            <td>
+                                @Html.EditorFor(model => model.pregunta25)
+                                @Html.ValidationMessageFor(model => model.pregunta25, "", new { @class = "text-danger" })
+                            </td>
+                            @* <td><input type="checkbox" value=""></td>*@
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>Do you blood excessively when you get cut?</td>
+                            <td>
+                                @Html.EditorFor(model => model.pregunta11)
+                                @Html.ValidationMessageFor(model => model.pregunta11, "", new { @class = "text-danger" })
+                            </td>
+                            @* <td><input type="checkbox" value=""></td>*@
+                            <td>Do you suffer thrush?</td>
+                            <td>
+                                @Html.EditorFor(model => model.pregunta26)
+                                @Html.ValidationMessageFor(model => model.pregunta26, "", new { @class = "text-danger" })
+                            </td>
+                            @*<td><input type="checkbox" value=""></td>*@
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>Do you suffer or suffered a blood problem?</td>
+                            <td>
+                                @Html.EditorFor(model => model.pregunta12)
+                                @Html.ValidationMessageFor(model => model.pregunta12, "", new { @class = "text-danger" })
+                            </td>
+                            @*<td><input type="checkbox" value=""></td>*@
+                            <td>Do you smoke?</td>
+                            <td>
+                                @Html.EditorFor(model => model.pregunta27)
+                                @Html.ValidationMessageFor(model => model.pregunta27, "", new { @class = "text-danger" })
+                            </td>
+                            @*<td><input type="checkbox" value=""></td>*@
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>Do you have HIV AIDS?</td>
+                            <td>
+                                @Html.EditorFor(model => model.pregunta13)
+                                @Html.ValidationMessageFor(model => model.pregunta13, "", new { @class = "text-danger" })
+                            </td>
+                            @*<td><input type="checkbox" value=""></td>*@
+                            <td>Do you have any citrus?</td>
+                            <td>
+                                @Html.EditorFor(model => model.pregunta28)
+                                @Html.ValidationMessageFor(model => model.pregunta28, "", new { @class = "text-danger" })
+                            </td>
+                            @*<td><input type="checkbox" value=""></td>*@
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>Are you pregnant?</td>
+                            <td>
+                                @Html.EditorFor(model => model.pregunta14)
+                                @Html.ValidationMessageFor(model => model.pregunta14, "", new { @class = "text-danger" })
+                            </td>
+                            @*<td><input type="checkbox" value=""></td>*@
+                            <td>Do you tightens your teeth during the night?</td>
+                            <td>
+                                @Html.EditorFor(model => model.pregunta29)
+                                @Html.ValidationMessageFor(model => model.pregunta29, "", new { @class = "text-danger" })
+                            </td>
+                            @*<td><input type="checkbox" value=""></td>*@
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>Are  you on birth control pills?</td>
+                            <td>
+                                @Html.EditorFor(model => model.pregunta15)
+                                @Html.ValidationMessageFor(model => model.pregunta15, "", new { @class = "text-danger" })
+                            </td>
+                            @*<td><input type="checkbox" value=""></td>*@
+                            <td></td>
+                            <td></td>
+                            @*<td></td>*@
+                        </tr>
+                    </tbody>
+                </table>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.observaciones, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-6">
+                    @Html.TextAreaFor(model => model.observaciones, new { htmlAttributes = new { @class = "form-control"} })
+                    @Html.ValidationMessageFor(model => model.observaciones, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.antecedenteClinico, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-6">
+                    @Html.TextAreaFor(model => model.antecedenteClinico, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.antecedenteClinico, "", new { @class = "text-danger" })
+                </div>
+            </div>
+    </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </div>
+        </fieldset>
+    </div>
+       
+}
+
+
