@@ -1,11 +1,83 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-<h1>*Mostrar un slide de ofertas 
-    <br />*Mostar los sevicios  readireccionar a una pagina o hacer un parcial view con los servicios<br />
-    *ser emotivos y pedirle al usuario que se registre para poder hacer una cita<br />
-    *tener un control y poner un panel a la izquierda solo en esta pagina... es para los servicios, las ofertas o paquetes.</h1>
-<p  >un cliente pude: crear citas... puede cancelarla... puede crear un historial medico... puede puede modificar sus datos...  </p>
-<p>un admin tiene el permiso de todo...</p>
-    
-    
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+    @*<div>
+        <img src="images/logo.png" alt="LOGO" height="52" width="362"></a>
+    </div>*@
+    <div class="highlight">
+        <div class="clearfix">
+            <div class="testimonial">
+                <p>
+                    <strong>"Allow us to Exceed your expectations."</strong>
+                </p>
+                <span>-D.D.S ABRAHAM ESTRADA.-</span>
+            </div>
+            <h1>Welcome to Estrada Family Dentistry</h1>
+            <p>
+                There is nothing more beautiful than a healthy smile. That is why our team will do everything we can to ensure your teeth are at their healthiest. Every recommendation we make for you will be one that takes your overall health and well-being into consideration.
+                We strive to deliver exceptional results for <br>
+                a smile that lasts a lifetime.
+            </p>
+        </div>
+    </div>
+
+
+    <div class="featured">
+        <h2>Why Choose Us?</h2>
+        <ul class="clearfix">
+            <li>
+                <div class="frame1">
+                    <div class="box">
+                        <img src="~/image/meeting.jpg" alt="Img" height="130" width="197">
+                    </div>
+                </div>
+                <p>
+                    <b>OUR TEAM</b> Know us.
+                </p>
+                @Html.ActionLink("Read More","About","Home", new { @class= "btn btn-danger", role="button" })
+                @*<a href="#" class="btn btn-danger" role="button">Read More</a>*@
+            </li>
+            <li>
+                <div class="frame1">
+                    <div class="box">
+                        <img src="~/image/handshake.png" alt="Img" height="130" width="197">
+                    </div>
+                </div>
+                <p>
+                    <b>OUR SERVICES</b> Know our specialties.
+                </p>
+                @Html.ActionLink("Read More", "About", "Home", new { @class = "btn btn-danger", role = "button" })
+            </li>
+            <li>
+                <div class="frame1">
+                    <div class="box">
+                        <img src="~/image/familia.jpg" alt="Img" height="130" width="197">
+                    </div>
+                </div>
+                <p>
+                    <b>DISCOUNT</b> Family Membership Is Available.
+                </p>
+                @Html.ActionLink("Read More", "About", "Home", new { @class = "btn btn-danger", role = "button" })
+            </li>
+            <li>
+                <div class="frame1">
+                    <div class="box">
+                        <img src="~/image/googlemaps.png" alt="Img" height="130" width="197">
+                    </div>
+                </div>
+                <p>
+                    <b>CONTACT US</b> Consult our address.
+                </p>
+                @Html.ActionLink("Read More", "About", "Home", new { @class = "btn btn-danger", role = "button" })
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

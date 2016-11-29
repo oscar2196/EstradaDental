@@ -168,10 +168,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\ArchivosController.cs" />
     <Compile Include="Controllers\CitasController.cs" />
     <Compile Include="Controllers\DoctoresController.cs" />
-    <Compile Include="Controllers\HistorialClinicoController.cs" />
     <Compile Include="Controllers\HistorialsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -214,29 +212,20 @@
     <Compile Include="Migrations\201611221942498_cambiouser.Designer.cs">
       <DependentUpon>201611221942498_cambiouser.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201611252150149_histclinico.cs" />
-    <Compile Include="Migrations\201611252150149_histclinico.Designer.cs">
-      <DependentUpon>201611252150149_histclinico.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611252354024_HCargument.cs" />
-    <Compile Include="Migrations\201611252354024_HCargument.Designer.cs">
-      <DependentUpon>201611252354024_HCargument.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611281532008_archivo2.cs" />
-    <Compile Include="Migrations\201611281532008_archivo2.Designer.cs">
-      <DependentUpon>201611281532008_archivo2.cs</DependentUpon>
+    <Compile Include="Migrations\201611241742248_Error.cs" />
+    <Compile Include="Migrations\201611241742248_Error.Designer.cs">
+      <DependentUpon>201611241742248_Error.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\Archivo.cs" />
     <Compile Include="Models\Cita.cs" />
     <Compile Include="Models\Doctor.cs" />
     <Compile Include="Models\Historial.cs" />
-    <Compile Include="Models\HistorialClinico.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\VMUserRoleName.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -305,23 +294,16 @@
     <Content Include="Views\Historials\Details.cshtml" />
     <Content Include="Views\Historials\Edit.cshtml" />
     <Content Include="Views\Historials\Index.cshtml" />
-    <Content Include="Views\Home\OurTeam.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Account\Index.cshtml" />
     <Content Include="Views\Citas\citas.cshtml" />
     <Content Include="Views\Citas\Index.cshtml" />
     <Content Include="Views\Citas\Details.cshtml" />
     <Content Include="Views\Citas\editarA.cshtml" />
-    <Content Include="Views\Citas\eliminacion.cshtml" />
-    <Content Include="Views\HistorialClinico\Create.cshtml" />
-    <Content Include="Views\HistorialClinico\Delete.cshtml" />
-    <Content Include="Views\HistorialClinico\Details.cshtml" />
-    <Content Include="Views\HistorialClinico\Edit.cshtml" />
-    <Content Include="Views\HistorialClinico\View.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Archivos\" />
+    <Folder Include="image\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -359,14 +341,8 @@
     <EmbeddedResource Include="Migrations\201611221942498_cambiouser.resx">
       <DependentUpon>201611221942498_cambiouser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611252150149_histclinico.resx">
-      <DependentUpon>201611252150149_histclinico.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611252354024_HCargument.resx">
-      <DependentUpon>201611252354024_HCargument.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611281532008_archivo2.resx">
-      <DependentUpon>201611281532008_archivo2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201611241742248_Error.resx">
+      <DependentUpon>201611241742248_Error.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
