@@ -236,5 +236,7 @@ C:\Users\Angel\Source\Repos\EstradaDental\EstradaDental\obj\Debug\EstradaDental.
 C:\Users\Angel\Source\Repos\EstradaDental\EstradaDental\obj\Debug\EstradaDental.pdb
 C:\Users\Angel\Source\Repos\EstradaDental\EstradaDental\obj\Debug\EstradaDental.Migrations.histclinico.resources
 C:\Users\Angel\Source\Repos\EstradaDental\EstradaDental\obj\Debug\EstradaDental.Migrations.HCargument.resources
-C:\Users\Angel\Source\Repos\EstradaDental\EstradaDental\obj\Debug\EstradaDental.csprojResolveAssemblyReference.cache
 C:\Users\Angel\Source\Repos\EstradaDental\EstradaDental\obj\Debug\EstradaDental.Migrations.archivo2.resources
+C:\Users\Angel\Source\Repos\EstradaDental\EstradaDental\obj\Debug\EstradaDental.Migrations.nose.resources
+C:\Users\Angel\Source\Repos\EstradaDental\EstradaDental\obj\Debug\EstradaDental.Migrations.Jiji.resources
+C:\Users\Angel\Source\Repos\EstradaDental\EstradaDental\obj\Debug\EstradaDental.Migrations.archivo.resources
