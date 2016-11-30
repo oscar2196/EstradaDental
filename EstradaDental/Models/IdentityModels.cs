@@ -28,6 +28,7 @@ namespace EstradaDental.Models
         //Un cliente tiene muchos historiales
         virtual public ICollection<Historial> historiales { get; set; }
         virtual public ICollection<HistorialClinico> historialClinico { get; set; }
+
         virtual public ICollection<Archivo> archivos { get; set; }
 
     }
@@ -53,6 +54,8 @@ namespace EstradaDental.Models
         
         }
 
-       // public System.Data.Entity.DbSet<EstradaDental.Models.ApplicationUser> ApplicationUsers { get; set; }
+        //public System.Data.Entity.DbSet<EstradaDental.Models.ApplicationUser> ApplicationUsers { get; set; }
+
+        // public System.Data.Entity.DbSet<EstradaDental.Models.ApplicationUser> ApplicationUsers { get; set; }
     }
 }

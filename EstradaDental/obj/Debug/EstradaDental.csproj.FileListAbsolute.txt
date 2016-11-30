@@ -240,3 +240,4 @@ C:\Users\Angel\Source\Repos\EstradaDental\EstradaDental\obj\Debug\EstradaDental.
 C:\Users\Angel\Source\Repos\EstradaDental\EstradaDental\obj\Debug\EstradaDental.Migrations.nose.resources
 C:\Users\Angel\Source\Repos\EstradaDental\EstradaDental\obj\Debug\EstradaDental.Migrations.Jiji.resources
 C:\Users\Angel\Source\Repos\EstradaDental\EstradaDental\obj\Debug\EstradaDental.Migrations.archivo.resources
+C:\Users\Angel\Source\Repos\EstradaDental\EstradaDental\obj\Debug\EstradaDental.csprojResolveAssemblyReference.cache

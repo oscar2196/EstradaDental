@@ -322,7 +322,6 @@
     <Content Include="Views\Historials\Edit.cshtml" />
     <Content Include="Views\Historials\Index.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Account\Index.cshtml" />
     <Content Include="Views\Citas\citas.cshtml" />
     <Content Include="Views\Citas\Index.cshtml" />
     <Content Include="Views\Citas\Details.cshtml" />
@@ -336,12 +335,14 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Account\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="image\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Views\Archivos\" />
+    <Folder Include="Views\VMUserRoleName\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

@@ -54,10 +54,10 @@ namespace EstradaDental.Controllers
         }
 
         //[Authorize(Roles = "Admin")]
-        //public ActionResult index()
+        //public ActionResult Index()
         //{
         //    var todosLosUsuarios = UserManager.Users.ToList();
-        //    var vuser = from usr in todosLosUsuarios select new ViewModels.VMUserRoleName();
+        //    //var vuser = from usr in todosLosUsuarios select new ViewModels.VMUserRoleName();
         //    return View(todosLosUsuarios);
         //}
 

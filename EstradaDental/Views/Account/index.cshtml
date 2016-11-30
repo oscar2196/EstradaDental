@@ -1,8 +1,10 @@
-﻿@*@model IEnumerable<EstradaDental.ViewModels.VMUserRoleName>
+﻿@model IEnumerable<EstradaDental.Models.ApplicationUser>
 
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
+
+    
 }
 
 <h2>Index</h2>
@@ -13,13 +15,22 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.nombreCompleto)
+            @Html.DisplayNameFor(model => model.nombre)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.email)
+            @Html.DisplayNameFor(model => model.apellidoP)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.rolID)
+            @Html.DisplayNameFor(model => model.direccion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserName)
         </th>
         <th></th>
     </tr>
@@ -27,13 +38,26 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.nombreCompleto)
+            @Html.DisplayFor(modelItem => item.nombre)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.email)
+            @Html.DisplayFor(modelItem => item.apellidoP)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.rolID)
+            @Html.DisplayFor(modelItem => item.direccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+       
+        <td>
+            @Html.DisplayFor(modelItem => item.PhoneNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserName)
+        </td>
+        <td>
+      @*      <img src="@Url("download","Archivo",new { id = fotito })"  />*@
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
@@ -43,4 +67,4 @@
     </tr>
 }
 
-</table>*@
+</table>
