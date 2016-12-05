@@ -1,16 +1,63 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+
 <!DOCTYPE HTML>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet"  type="text/css" href="~/sliderengine/amazingslider-1.css">
+    
+
 </head>
-<body>
-    @*<div>
-        <img src="images/logo.png" alt="LOGO" height="52" width="362"></a>
-    </div>*@
+<body >
+    <br />
+    
+    <!-- Insert to your webpage where you want to display the slider -->
+    <div id="amazingslider-wrapper-1" style="display:block;position:relative;max-width:900px;margin:0px auto 56px;">
+        <div id="amazingslider-1" style="display:block;position:relative;margin:0 auto;">
+            <ul class="amazingslider-slides" style="display:none;">
+                <li>
+                    <img src="/images/Diseno_de_sonrisa.jpg" alt="&lt;strong&gt;SING UP TO REQUEST AN APPOINTMENT AND MORE...&lt;/strong&gt;" title="&lt;strong&gt;SING UP TO REQUEST AN APPOINTMENT AND MORE...&lt;/strong&gt;" data-texteffect="Red box" />
+                    <button class="as-btn-orange-large">SING UP</button>
+                </li>
+                <li>
+                    <a href="/images/shutterstock_160939997-lightbox.jpg" class="html5lightbox">
+                        <img src="/images/shutterstock_160939997.jpg" alt="&lt;strong&gt;FAMILY  MEMBERSHIP NOW AVAILABLE&lt;/strong&gt;&lt;br&gt; Yearly Family Membership Now Available" title="&lt;strong&gt;FAMILY  MEMBERSHIP NOW AVAILABLE&lt;/strong&gt;&lt;br&gt; Yearly Family Membership Now Available" data-texteffect="Navy box" data-duration="4964" />
+                    </a>
+                    <button class="as-btn-orange-large">Read More</button>
+                </li>
+                <li>
+                    <img src="/images/Expertos-en-est%C3%A9tica-dental.jpg" alt="&lt; strong&gt; OUR SERVICES &lt;/strong&gt;" title="&lt;strong&gt;OUR SERVICES &lt;/strong&gt;" data-texteffect="Red box" />
+                    <button class="as-btn-orange-large">Read More</button>
+                </li>
+                <li>
+                    <img src="/images/img_%20%2811%29.jpg" alt="&lt;strong&gt;CONTACT US&lt;/strong&gt;&lt;br&gt;And Know Our Facilities" title="&lt;strong&gt;CONTACT US&lt;/strong&gt;&lt;br&gt;And Know Our Facilities" data-texteffect="Red box" />
+                    <button class="as-btn-orange-large">Click for more information</button>
+                </li>
+                <li>
+                    <img src="/images/img_%20%2832%29.jpg" alt="&lt;strong&gt;ABOUT US&lt;/strong&gt;&lt;br&gt;With high quality technology and comfort" title="&lt;strong&gt;ABOUT US&lt;/strong&gt;&lt;br&gt;With high quality technology and comfort" data-texteffect="Color box right align" />
+                    <button class="as-btn-orange-large">Click here</button>
+                </li>
+            </ul>
+            <ul class="amazingslider-thumbnails" style="display:none;">
+                <li><img src="/images/Diseno_de_sonrisa-tn.jpg" alt="&lt;strong&gt;SING UP TO REQUEST AN APPOINTMENT AND MORE...&lt;/strong&gt;" title="&lt;strong&gt;SING UP TO REQUEST AN APPOINTMENT AND MORE...&lt;/strong&gt;" /></li>
+                <li>
+                    <img src="/images/shutterstock_160939997-tn.jpg" alt="&lt;strong&gt;FAMILY  MEMBERSHIP NOW AVAILABLE&lt;/strong&gt;&lt;br&gt; Yearly Family Membership Now Available" title="&lt;strong&gt;FAMILY  MEMBERSHIP NOW AVAILABLE&lt;/strong&gt;&lt;br&gt; Yearly Family Membership Now Available" />
+                </li>
+                <li><img src="/images/Expertos-en-est%C3%A9tica-dental-tn.jpg" alt="&lt;strong&gt;OUR SERVICES &lt;/strong&gt;" title="&lt;strong&gt;OUR SERVICES &lt;/strong&gt;" /></li>
+                <li>
+                    <img src="/images/img_%20%2811%29-tn.jpg" alt="&lt;strong&gt;CONTACT US&lt;/strong&gt;&lt;br&gt;And Know Our Facilities" title="&lt;strong&gt;CONTACT US&lt;/strong&gt;&lt;br&gt;And Know Our Facilities" />
+                </li>
+                <li>
+                    <img src="/images/img_%20%2832%29-tn.jpg" alt="&lt;strong&gt;ABOUT US&lt;/strong&gt;&lt;br&gt;With high quality technology and comfort" title="&lt;strong&gt;ABOUT US&lt;/strong&gt;&lt;br&gt;With high quality technology and comfort" />
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- Final del Carousel -->
+
+
     <div class="highlight">
         <div class="clearfix">
             <div class="testimonial">
@@ -41,7 +88,7 @@
                 <p>
                     <b>OUR TEAM</b> Know us.
                 </p>
-                @Html.ActionLink("Read More","About","Home", new { @class= "btn btn-danger", role="button" })
+                @Html.ActionLink("Read More","Team","Home", new { @class= "btn btn-danger", role="button" })
                 @*<a href="#" class="btn btn-danger" role="button">Read More</a>*@
             </li>
             <li>
@@ -53,7 +100,7 @@
                 <p>
                     <b>OUR SERVICES</b> Know our specialties.
                 </p>
-                @Html.ActionLink("Read More", "About", "Home", new { @class = "btn btn-danger", role = "button" })
+                @Html.ActionLink("Read More", "Services", "Home", new { @class = "btn btn-danger", role = "button" })
             </li>
             <li>
                 <div class="frame1">
@@ -64,7 +111,7 @@
                 <p>
                     <b>DISCOUNT</b> Family Membership Is Available.
                 </p>
-                @Html.ActionLink("Read More", "About", "Home", new { @class = "btn btn-danger", role = "button" })
+                @Html.ActionLink("Read More", "Discount", "Home", new { @class = "btn btn-danger", role = "button" })
             </li>
             <li>
                 <div class="frame1">
@@ -75,9 +122,14 @@
                 <p>
                     <b>CONTACT US</b> Consult our address.
                 </p>
-                @Html.ActionLink("Read More", "About", "Home", new { @class = "btn btn-danger", role = "button" })
+                @Html.ActionLink("Read More", "Contact", "Home", new { @class = "btn btn-danger", role = "button" })
             </li>
         </ul>
     </div>
+
+    @section Scripts {
+        <script src="/sliderengine/amazingslider.js"></script>
+        <script src="/sliderengine/initslider-1.js"></script>
+    }
 </body>
 </html>

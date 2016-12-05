@@ -6,10 +6,9 @@
 }
 
 <h2>citas</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+<br />
+<br>
+    @*@Html.ActionLink("Create New", "Create", new { @class = "btn btn-danger", role = "button" })*@
 <table class="table">
     <tr>
         <th>
@@ -54,9 +53,13 @@
             @Html.DisplayFor(modelItem => item.comentario)
         </td>
         <td>
-            @Html.ActionLink("Edit", "editarA", new { id=item.citaID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.citaID }) |
-            @Html.ActionLink("Delete", "eliminacion", new { id=item.citaID })
+            @Html.ActionLink("Edit", "editarA", new { role="button", @class="btn btn-danger", id=item.citaID}) 
+            @Html.ActionLink("Details", "Details", new { @class = "btn btn-danger", id =item.citaID }) 
+            @Html.ActionLink("Delete", "eliminacion", new { @class = "btn btn-danger", id = item.citaID })
+
+            @*<a href="editarA" class="btn btn-danger" role="button">Edit</a> 
+            <a href="Details" class="btn btn-danger"  role="button">Details</a>
+            <a href="eliminacion" class="btn btn-danger" role="button">Delete</a>*@
         </td>
     </tr>
 }
