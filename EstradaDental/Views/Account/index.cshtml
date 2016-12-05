@@ -1,7 +1,9 @@
 ﻿@model IEnumerable<EstradaDental.ViewModels.VMUserRoleName>
 
 @{
+
     ViewBag.Title = "Index";
+
     Layout = "~/Views/Shared/_Layout.cshtml";
     //int fotito = Model.archivos.Single(a => a.tipo == "Perfil").archivoID;
 }
@@ -11,6 +13,7 @@
 <h2>inicio de usuarios registrados</h2>
 
 <table class="table">
+
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.nombreCompleto)
