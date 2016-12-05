@@ -11,12 +11,12 @@ namespace EstradaDental.Models
         [Key]
         public int historialID { get; set; }
 
-        [Display(Name = "Please enter your dental history")]
+        [Display(Name = "Reason for consultation")]
         public string comentario { get; set; }
 
         [Display(Name ="Day and hour")]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
-        [DataType(DataType.Date)]
+        [DataType(DataType.Date)]/*dd-MM-yyyy*/
         public DateTime fecha { get; set; }
 
 
