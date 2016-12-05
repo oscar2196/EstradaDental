@@ -249,6 +249,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="Views\VMUserRoleName\VMUserRoleName.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -342,7 +343,6 @@
     <Folder Include="image\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Views\Archivos\" />
-    <Folder Include="Views\VMUserRoleName\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

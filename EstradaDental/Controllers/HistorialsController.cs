@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using EstradaDental.Models;
+using Microsoft.AspNet.Identity;
 
 namespace EstradaDental.Controllers
 {
@@ -15,9 +16,16 @@ namespace EstradaDental.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Historials
+        [Authorize(Roles = "User, Admin")]
         public ActionResult Index()
         {
-            return View(db.historial.ToList());
+
+            string iduser = User.Identity.GetUserId();
+            var Hist = new List<Historial>();
+            Hist = db.historial.Where(a => a.clienteID == iduser).ToList();
+            //string nombre = db.Users.were(a => a.nombre  );
+
+            return View(Hist);
         }
 
         // GET: Historials/Details/5
@@ -53,6 +61,7 @@ namespace EstradaDental.Controllers
         {
             if (ModelState.IsValid)
             {
+                historial.clienteID = User.Identity.GetUserId();
                 db.historial.Add(historial);
                 db.SaveChanges();
                 return RedirectToAction("Index");
