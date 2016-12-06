@@ -177,8 +177,8 @@ namespace EstradaDental.Controllers
                 //modificar
                 var user = new ApplicationUser { UserName = model.Email, Email = model.Email,
                    nombre= model.nombre,apellidoP= model.apellidoP,
-                    direccion = model.direccion,PhoneNumber= model.telefono };
-                user.archivos = new List<Archivo> { ar };
+                    direccion = model.direccion,PhoneNumber= model.PhoneNumber };
+                //user.archivos = new List<Archivo> { ar };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
