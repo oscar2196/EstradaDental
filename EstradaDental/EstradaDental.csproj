@@ -168,8 +168,10 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdmxxsController.cs" />
     <Compile Include="Controllers\ArchivosController.cs" />
     <Compile Include="Controllers\CitasController.cs" />
+    <Compile Include="Controllers\ClientesController.cs" />
     <Compile Include="Controllers\DoctoresController.cs" />
     <Compile Include="Controllers\HistorialClinicoController.cs" />
     <Compile Include="Controllers\HistorialsController.cs" />
@@ -234,14 +236,28 @@
     <Compile Include="Migrations\201611281505077_archivo.Designer.cs">
       <DependentUpon>201611281505077_archivo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201611281532008_archivo2.cs" />
-    <Compile Include="Migrations\201611281532008_archivo2.Designer.cs">
-      <DependentUpon>201611281532008_archivo2.cs</DependentUpon>
+    <Compile Include="Migrations\201612030205068_cambiopersonal.cs" />
+    <Compile Include="Migrations\201612030205068_cambiopersonal.Designer.cs">
+      <DependentUpon>201612030205068_cambiopersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612052228140_datoFail.cs" />
+    <Compile Include="Migrations\201612052228140_datoFail.Designer.cs">
+      <DependentUpon>201612052228140_datoFail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612052309560_Admin.cs" />
+    <Compile Include="Migrations\201612052309560_Admin.Designer.cs">
+      <DependentUpon>201612052309560_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612060049154_salo.cs" />
+    <Compile Include="Migrations\201612060049154_salo.Designer.cs">
+      <DependentUpon>201612060049154_salo.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Admxx.cs" />
     <Compile Include="Models\Archivo.cs" />
     <Compile Include="Models\Cita.cs" />
+    <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Doctor.cs" />
     <Compile Include="Models\Historial.cs" />
     <Compile Include="Models\HistorialClinico.cs" />
@@ -331,7 +347,9 @@
     <Content Include="sliderengine\playvideo-64-64-0.png" />
     <Content Include="sliderengine\previewarrow-16-8-0.png" />
     <Content Include="Views\Shared\logo.jpg" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -392,9 +410,23 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
+
+    <Content Include="Views\Account\Index.cshtml" />
+    <Content Include="Views\Clientes\Create.cshtml" />
+    <Content Include="Views\Clientes\Delete.cshtml" />
+    <Content Include="Views\Clientes\Details.cshtml" />
+    <Content Include="Views\Clientes\Edit.cshtml" />
+    <Content Include="Views\Clientes\Index.cshtml" />
+    <Content Include="Views\Admxxs\Create.cshtml" />
+    <Content Include="Views\Admxxs\Delete.cshtml" />
+    <Content Include="Views\Admxxs\Details.cshtml" />
+    <Content Include="Views\Admxxs\Edit.cshtml" />
+    <Content Include="Views\Admxxs\Index.cshtml" />
+
     <Content Include="Views\Home\Team.cshtml" />
     <Content Include="Views\Home\Services.cshtml" />
     <Content Include="Views\Home\Discount.cshtml" />
+
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -452,8 +484,17 @@
     <EmbeddedResource Include="Migrations\201611281505077_archivo.resx">
       <DependentUpon>201611281505077_archivo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611281532008_archivo2.resx">
-      <DependentUpon>201611281532008_archivo2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201612030205068_cambiopersonal.resx">
+      <DependentUpon>201612030205068_cambiopersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612052228140_datoFail.resx">
+      <DependentUpon>201612052228140_datoFail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612052309560_Admin.resx">
+      <DependentUpon>201612052309560_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612060049154_salo.resx">
+      <DependentUpon>201612060049154_salo.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

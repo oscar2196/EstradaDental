@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace EstradaDental.Models
@@ -95,10 +96,20 @@ namespace EstradaDental.Models
 
        // [Required]
         [Display(Name = "Number phone")]
-        public string telefono { get; set; }
+        public string PhoneNumber { get; set; }
 
-        //[Required]
-        [Display(Name = "Rol")]
+        [Display(Name = "Birthday")]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        [DataType(DataType.Date)]
+        public DateTime fechaNac { get; set; }
+
+        [Display(Name = "Last last name")]
+        public string apellidoM { get; set; }
+
+        [Display(Name = "City")]
+        public string ciudad { get; set; }
+        
+        [Display(Name = "rol")]
         public string rol { get; set; }
 
 
