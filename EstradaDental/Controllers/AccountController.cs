@@ -53,13 +53,13 @@ namespace EstradaDental.Controllers
             }
         }
 
-        //[Authorize(Roles = "Admin")]
-        //public ActionResult Index()
-        //{
-        //    var todosLosUsuarios = UserManager.Users.ToList();
-        //    //var vuser = from usr in todosLosUsuarios select new ViewModels.VMUserRoleName();
-        //    return View(todosLosUsuarios);
-        //}
+        [Authorize(Roles = "Admin")]
+        public ActionResult Index()
+        {
+            var todosLosUsuarios = UserManager.Users.ToList();
+            var vuser = from usr in todosLosUsuarios select new ViewModels.VMUserRoleName();
+            return View(todosLosUsuarios);
+        }
 
         // GET: /Account/Login
         [AllowAnonymous]
