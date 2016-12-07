@@ -19,7 +19,7 @@ namespace EstradaDental.Controllers
         [Authorize(Roles = "Admin")]
         public ActionResult citas()
         {
-            var cita = db.cita.Include(c => c.cliente).Include(c => c.doctor);
+            var cita = db.cita.Include(c => c.cliente);
             return View(cita.ToList());
         }
 
@@ -61,7 +61,7 @@ namespace EstradaDental.Controllers
         {
 
             ViewBag.clienteID = new SelectList(db.Users, "Id", "nombre");
-            ViewBag.doctorID = new SelectList(db.doctor, "doctorID", "nombre");
+            
             return View();
         }
 
@@ -71,7 +71,7 @@ namespace EstradaDental.Controllers
         [HttpPost]
         [Authorize(Roles = "User")]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "citaID,confirmacion,fechaIn,fechaOut,doctorID,clienteID,comentario")] Cita cita)
+        public ActionResult Create([Bind(Include = "citaID,confirmacion,fechaIn,fechaOut,clienteID,comentario")] Cita cita)
         {
             if (ModelState.IsValid)
             {
@@ -83,7 +83,7 @@ namespace EstradaDental.Controllers
             }
 
             ViewBag.clienteID = new SelectList(db.Users, "Id", "nombre", cita.clienteID);
-            ViewBag.doctorID = new SelectList(db.doctor, "doctorID", "nombre", cita.doctorID);
+            //ViewBag.doctorID = new SelectList(db.doctor, "doctorID", "nombre", cita.doctorID);
             return View(cita);
         }
         [Authorize(Roles = "User, Admin")]
@@ -100,7 +100,7 @@ namespace EstradaDental.Controllers
                 return HttpNotFound();
             }
             ViewBag.clienteID = new SelectList(db.Users, "Id", "nombre", cita.clienteID);
-            ViewBag.doctorID = new SelectList(db.doctor, "doctorID", "nombre", cita.doctorID);
+            //ViewBag.doctorID = new SelectList(db.doctor, "doctorID", "nombre", cita.doctorID);
             return View(cita);
         }
 
@@ -121,7 +121,7 @@ namespace EstradaDental.Controllers
                 return RedirectToAction("Index");
             }
             ViewBag.clienteID = new SelectList(db.Users, "Id", "nombre", cita.clienteID);
-            ViewBag.doctorID = new SelectList(db.doctor, "doctorID", "nombre", cita.doctorID);
+            //ViewBag.doctorID = new SelectList(db.doctor, "doctorID", "nombre", cita.doctorID);
             return View(cita);
         }
         [Authorize(Roles = "User")]
@@ -166,7 +166,7 @@ namespace EstradaDental.Controllers
                 return HttpNotFound();
             }
             ViewBag.clienteID = new SelectList(db.Users, "Id", "nombre", cita.clienteID);
-            ViewBag.doctorID = new SelectList(db.doctor, "doctorID", "nombre", cita.doctorID);
+            //ViewBag.doctorID = new SelectList(db.doctor, "doctorID", "nombre", cita.doctorID);
             return View(cita);
         }
 
@@ -187,7 +187,7 @@ namespace EstradaDental.Controllers
                 return RedirectToAction("citas");
             }
             ViewBag.clienteID = new SelectList(db.Users, "Id", "nombre", cita.clienteID);
-            ViewBag.doctorID = new SelectList(db.doctor, "doctorID", "nombre", cita.doctorID);
+            //ViewBag.doctorID = new SelectList(db.doctor, "doctorID", "nombre", cita.doctorID);
             return View(cita);
         }
         [Authorize(Roles = "Admin")]

@@ -1,0 +1,84 @@
+﻿@model IEnumerable<EstradaDental.Models.Cita>
+
+@{
+    ViewBag.Title = "citas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>citas</h2>
+<br />
+<br>
+    @*@Html.ActionLink("Create New", "Create", new { @class = "btn btn-danger", role = "button" })*@
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.cliente.nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.doctor.nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.confirmacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fechaIn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fechaOut)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.comentario)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.cliente.nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.doctor.nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.confirmacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaIn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaOut)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.comentario)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "editarA", new { role="button", @class="btn btn-danger", id=item.citaID}) 
+            @Html.ActionLink("Details", "Details", new { @class = "btn btn-danger", id =item.citaID }) 
+            @Html.ActionLink("Delete", "eliminacion", new { @class = "btn btn-danger", id = item.citaID })
+
+            @*<a href="editarA" class="btn btn-danger" role="button">Edit</a> 
+            <a href="Details" class="btn btn-danger"  role="button">Details</a>
+            <a href="eliminacion" class="btn btn-danger" role="button">Delete</a>*@
+        </td>
+    </tr>
+}
+
+</table>
+@*<div style="overflow:hidden;">
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-8">
+                <div id="datetimepicker12"></div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(function () {
+            $('#datetimepicker12').datetimepicker({
+                inline: true,
+                sideBySide: true
+            });
+        });
+    </script>
+</div>*@

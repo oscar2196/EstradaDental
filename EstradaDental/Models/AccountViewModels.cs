@@ -113,6 +113,8 @@ namespace EstradaDental.Models
         public string rol { get; set; }
 
 
+
+
     }
 
     public class ResetPasswordViewModel

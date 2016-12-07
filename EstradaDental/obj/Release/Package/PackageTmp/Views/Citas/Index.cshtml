@@ -1,0 +1,57 @@
+﻿@model IEnumerable<EstradaDental.Models.Cita>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h3>Dental appointment</h3>
+<p>
+    <a class="btn btn-danger" href="Citas/Create" role="button">Create New</a>
+</p>
+<table class="table">
+    <tr>
+
+        <th>
+            @Html.DisplayNameFor(model => model.confirmacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fechaIn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fechaOut)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.comentario)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.confirmacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fechaIn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fechaOut)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.comentario)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.citaID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.citaID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.citaID })
+            </td>
+        </tr>
+    }
+
+</table>
+
+
+
+

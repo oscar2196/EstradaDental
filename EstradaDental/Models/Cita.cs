@@ -24,9 +24,9 @@ namespace EstradaDental.Models
         [DataType(DataType.Date)]
         public DateTime fechaOut { get; set; }
 
-        //[Required]
-        [Display(Name = "Doctor name")]
-        public int doctorID { get; set; }
+        ////[Required]
+        //[Display(Name = "Doctor name")]
+        //public int doctorID { get; set; }
 
         
         //[Required]
@@ -40,11 +40,11 @@ namespace EstradaDental.Models
 
 
         //Una cita tiene un cliente
-        virtual public ApplicationUser cliente { get; set; }
+        virtual public Cliente cliente { get; set; }
         //Una cita tiene un dentista
-        virtual public Doctor doctor { get; set; }
+        //virtual public Doctor doctor { get; set; }
+        virtual public Admxx admxx { get; set; }
 
-        
 
     }
 }

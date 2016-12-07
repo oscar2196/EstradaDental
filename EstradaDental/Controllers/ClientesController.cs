@@ -69,9 +69,9 @@ namespace EstradaDental.Controllers
                 Cliente Clientes = new Cliente(cliente);
                 var result = await UserManager.CreateAsync(Clientes, cliente.Password);
 
-                //clientenuevo.archivos = new List<Archivo> { ar };
-                //db.ApplicationUsers.Add(clientenuevo);
-                // db.SaveChanges();
+                Clientes.archivos = new List<Archivo> { ar };
+                db.Users.Add(Clientes);
+                db.SaveChanges();
                 if (result.Succeeded)
                 {
                     UserManager.AddToRole(Clientes.Id,"User");
