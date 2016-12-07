@@ -48,6 +48,6 @@ namespace EstradaDental.Models
         public string antecedenteClinico { get; set; }
 
 
-        virtual public ApplicationUser clientes { get; set; }
+        virtual public Cliente clientes { get; set; }
     }
 }

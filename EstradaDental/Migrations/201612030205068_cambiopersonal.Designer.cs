@@ -7,13 +7,13 @@ namespace EstradaDental.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class archivo2 : IMigrationMetadata
+    public sealed partial class cambiopersonal : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(archivo2));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(cambiopersonal));
         
         string IMigrationMetadata.Id
         {
-            get { return "201611281532008_archivo2"; }
+            get { return "201612030205068_cambiopersonal"; }
         }
         
         string IMigrationMetadata.Source
