@@ -47,7 +47,7 @@ namespace EstradaDental.Models
     {
         
         public DbSet<Cita> cita { get; set; }
-        public DbSet<Doctor> doctor { get; set; }
+        //public DbSet<Doctor> doctor { get; set; }
         public DbSet<Historial> historial { get; set; }
         public DbSet<HistorialClinico> historialclinico { get; set; }
         public DbSet<Archivo> archivo { get; set; }

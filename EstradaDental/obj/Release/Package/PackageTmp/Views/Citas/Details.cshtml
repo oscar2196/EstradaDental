@@ -1,0 +1,67 @@
+﻿@model EstradaDental.Models.Cita
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Cita</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.cliente.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cliente.nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.doctor.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.doctor.nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.confirmacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.confirmacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fechaIn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaIn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fechaOut)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaOut)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.comentario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.comentario)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.citaID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

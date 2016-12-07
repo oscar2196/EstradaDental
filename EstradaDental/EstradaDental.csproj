@@ -168,11 +168,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\AdmxxsController.cs" />
     <Compile Include="Controllers\ArchivosController.cs" />
     <Compile Include="Controllers\CitasController.cs" />
     <Compile Include="Controllers\ClientesController.cs" />
-    <Compile Include="Controllers\DoctoresController.cs" />
     <Compile Include="Controllers\HistorialClinicoController.cs" />
     <Compile Include="Controllers\HistorialsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -180,77 +178,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201611081411433_InitialCreate.cs" />
-    <Compile Include="Migrations\201611081411433_InitialCreate.Designer.cs">
-      <DependentUpon>201611081411433_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201612061525382_all-migration.cs" />
+    <Compile Include="Migrations\201612061525382_all-migration.Designer.cs">
+      <DependentUpon>201612061525382_all-migration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201611112140129_InitialCreate1.cs" />
-    <Compile Include="Migrations\201611112140129_InitialCreate1.Designer.cs">
-      <DependentUpon>201611112140129_InitialCreate1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611141534159_migra-donaltrump.cs" />
-    <Compile Include="Migrations\201611141534159_migra-donaltrump.Designer.cs">
-      <DependentUpon>201611141534159_migra-donaltrump.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611141642233_delateClientes.cs" />
-    <Compile Include="Migrations\201611141642233_delateClientes.Designer.cs">
-      <DependentUpon>201611141642233_delateClientes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611141654156_clientenew.cs" />
-    <Compile Include="Migrations\201611141654156_clientenew.Designer.cs">
-      <DependentUpon>201611141654156_clientenew.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611151513120_borradoClienteid.cs" />
-    <Compile Include="Migrations\201611151513120_borradoClienteid.Designer.cs">
-      <DependentUpon>201611151513120_borradoClienteid.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611172035108_phone.cs" />
-    <Compile Include="Migrations\201611172035108_phone.Designer.cs">
-      <DependentUpon>201611172035108_phone.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611192155493_teldoctor.cs" />
-    <Compile Include="Migrations\201611192155493_teldoctor.Designer.cs">
-      <DependentUpon>201611192155493_teldoctor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611221942498_cambiouser.cs" />
-    <Compile Include="Migrations\201611221942498_cambiouser.Designer.cs">
-      <DependentUpon>201611221942498_cambiouser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611241358480_nose.cs" />
-    <Compile Include="Migrations\201611241358480_nose.Designer.cs">
-      <DependentUpon>201611241358480_nose.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611241831044_Jiji.cs" />
-    <Compile Include="Migrations\201611241831044_Jiji.Designer.cs">
-      <DependentUpon>201611241831044_Jiji.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611252150149_histclinico.cs" />
-    <Compile Include="Migrations\201611252150149_histclinico.Designer.cs">
-      <DependentUpon>201611252150149_histclinico.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611252354024_HCargument.cs" />
-    <Compile Include="Migrations\201611252354024_HCargument.Designer.cs">
-      <DependentUpon>201611252354024_HCargument.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611281505077_archivo.cs" />
-    <Compile Include="Migrations\201611281505077_archivo.Designer.cs">
-      <DependentUpon>201611281505077_archivo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201612030205068_cambiopersonal.cs" />
-    <Compile Include="Migrations\201612030205068_cambiopersonal.Designer.cs">
-      <DependentUpon>201612030205068_cambiopersonal.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201612052228140_datoFail.cs" />
-    <Compile Include="Migrations\201612052228140_datoFail.Designer.cs">
-      <DependentUpon>201612052228140_datoFail.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201612052309560_Admin.cs" />
-    <Compile Include="Migrations\201612052309560_Admin.Designer.cs">
-      <DependentUpon>201612052309560_Admin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201612060049154_salo.cs" />
-    <Compile Include="Migrations\201612060049154_salo.Designer.cs">
-      <DependentUpon>201612060049154_salo.cs</DependentUpon>
+    <Compile Include="Migrations\201612071507347_doctor.cs" />
+    <Compile Include="Migrations\201612071507347_doctor.Designer.cs">
+      <DependentUpon>201612071507347_doctor.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -258,7 +192,6 @@
     <Compile Include="Models\Archivo.cs" />
     <Compile Include="Models\Cita.cs" />
     <Compile Include="Models\Cliente.cs" />
-    <Compile Include="Models\Doctor.cs" />
     <Compile Include="Models\Historial.cs" />
     <Compile Include="Models\HistorialClinico.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -298,6 +231,7 @@
     <Content Include="image\meeting.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Properties\PublishProfiles\estradaDental.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -358,7 +292,6 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Manage\Shared\Error.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
@@ -380,13 +313,10 @@
     <Content Include="Views\Manage\ManageLogins.cshtml" />
     <Content Include="Views\Manage\SetPassword.cshtml" />
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
-    <Content Include="Views\Manage\Shared\Lockout.cshtml" />
-    <Content Include="Views\Manage\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Doctores\Create.cshtml" />
     <Content Include="Views\Doctores\Delete.cshtml" />
     <Content Include="Views\Doctores\Edit.cshtml" />
     <Content Include="Views\Doctores\Index.cshtml" />
-    <Content Include="Views\Home\OurTeam.cshtml" />
     <Content Include="Views\Citas\Create.cshtml" />
     <Content Include="Views\Citas\Delete.cshtml" />
     <Content Include="Views\Citas\Edit.cshtml" />
@@ -410,23 +340,15 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
-
     <Content Include="Views\Account\Index.cshtml" />
     <Content Include="Views\Clientes\Create.cshtml" />
     <Content Include="Views\Clientes\Delete.cshtml" />
     <Content Include="Views\Clientes\Details.cshtml" />
     <Content Include="Views\Clientes\Edit.cshtml" />
     <Content Include="Views\Clientes\Index.cshtml" />
-    <Content Include="Views\Admxxs\Create.cshtml" />
-    <Content Include="Views\Admxxs\Delete.cshtml" />
-    <Content Include="Views\Admxxs\Details.cshtml" />
-    <Content Include="Views\Admxxs\Edit.cshtml" />
-    <Content Include="Views\Admxxs\Index.cshtml" />
-
     <Content Include="Views\Home\Team.cshtml" />
     <Content Include="Views\Home\Services.cshtml" />
     <Content Include="Views\Home\Discount.cshtml" />
-
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -442,59 +364,11 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201611081411433_InitialCreate.resx">
-      <DependentUpon>201611081411433_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201612061525382_all-migration.resx">
+      <DependentUpon>201612061525382_all-migration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611112140129_InitialCreate1.resx">
-      <DependentUpon>201611112140129_InitialCreate1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611141534159_migra-donaltrump.resx">
-      <DependentUpon>201611141534159_migra-donaltrump.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611141642233_delateClientes.resx">
-      <DependentUpon>201611141642233_delateClientes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611141654156_clientenew.resx">
-      <DependentUpon>201611141654156_clientenew.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611151513120_borradoClienteid.resx">
-      <DependentUpon>201611151513120_borradoClienteid.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611172035108_phone.resx">
-      <DependentUpon>201611172035108_phone.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611192155493_teldoctor.resx">
-      <DependentUpon>201611192155493_teldoctor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611221942498_cambiouser.resx">
-      <DependentUpon>201611221942498_cambiouser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611241358480_nose.resx">
-      <DependentUpon>201611241358480_nose.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611241831044_Jiji.resx">
-      <DependentUpon>201611241831044_Jiji.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611252150149_histclinico.resx">
-      <DependentUpon>201611252150149_histclinico.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611252354024_HCargument.resx">
-      <DependentUpon>201611252354024_HCargument.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611281505077_archivo.resx">
-      <DependentUpon>201611281505077_archivo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201612030205068_cambiopersonal.resx">
-      <DependentUpon>201612030205068_cambiopersonal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201612052228140_datoFail.resx">
-      <DependentUpon>201612052228140_datoFail.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201612052309560_Admin.resx">
-      <DependentUpon>201612052309560_Admin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201612060049154_salo.resx">
-      <DependentUpon>201612060049154_salo.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201612071507347_doctor.resx">
+      <DependentUpon>201612071507347_doctor.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

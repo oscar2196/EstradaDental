@@ -1,0 +1,255 @@
+﻿@model IEnumerable<EstradaDental.Models.HistorialClinico>
+
+@{
+    ViewBag.Title = "View";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+
+
+   
+    <div class="dl-horizontal">
+        <fieldset>
+            <legend>Medical History</legend>
+            <div class="container">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>N</th>
+                            <th></th>
+                            <th>YES</th>
+
+                            <th></th>
+                            <th>YES</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+@foreach (var item in Model)
+{
+                        <tr>
+                            <td>1</td>
+                            <td>Are you under medical treatment?</td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.pregunta1)
+                               
+                            </td>
+                            @*<td><input type="checkbox" value=""></td>*@
+                            <td>Do you suffer or suffered</td>
+                            <td></td>
+                            @*<td></td>*@
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Are you actually  taking antibiotic?</td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.pregunta2)
+                            </td>
+                            @*<td><input type="checkbox" value=""></td>*@
+                            <td>S.T.D.</td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.pregunta16)
+                            </td>
+                            @*<td><input type="checkbox" value=""></td>*@
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Have you had a medical surgery?</td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.pregunta3)
+                            </td>
+                            @*<td><input type="checkbox" value=""></td>*@
+                            <td>Heart problems</td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.pregunta17)
+                             </td>
+                            @*<td><input type="checkbox" value=""></td>*@
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Have you had blood transfusion?</td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.pregunta4)
+                             </td>
+                            @*<td><input type="checkbox" value=""></td>*@
+                            <td>Hepatitis</td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.pregunta18)
+                            </td>
+                            @*<td><input type="checkbox" value=""></td>*@
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Have you or taking drugs?</td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.pregunta5)
+                            </td>
+                            @*<td><input type="checkbox" value=""></td>*@
+                            <td>Rheumatic  fever</td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.pregunta19)
+                            </td>
+                            @* <td><input type="checkbox" value=""></td>*@
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Are you allergic to </td>
+                            <td></td>
+                            @*<td></td>*@
+                            <td>Asthma</td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.pregunta20)
+                            </td>
+                            @*<td><input type="checkbox" value=""></td>*@
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Anesthesia</td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.pregunta6)
+                             </td>
+                            @*<td><input type="checkbox" value=""></td>*@
+                            <td>Diabetes</td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.pregunta21)
+                            </td>
+                            @*<td><input type="checkbox" value=""></td>*@
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Medicine</td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.pregunta7)
+                             </td>
+                            @*<td><input type="checkbox" value=""></td>*@
+                            <td>Gastric ulcer</td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.pregunta22)
+                            </td>
+                            @*<td><input type="checkbox" value=""></td>*@
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Food</td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.pregunta8)
+                            </td>
+                            @*<td><input type="checkbox" value=""></td>*@
+                            <td>Thyroid</td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.pregunta23)
+                            </td>
+                            @*<td><input type="checkbox" value=""></td>*@
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Physical or environmental</td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.pregunta9)
+                             </td>
+                            @* <td><input type="checkbox" value=""></td>*@
+                            <td>Have you has any problem on opening and  closing your mouth?</td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.pregunta24)
+                             </td>
+                            @* <td><input type="checkbox" value=""></td>*@
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>Do you suffer high pressure or low blood?</td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.pregunta10)
+                            </td>
+                            @* <td><input type="checkbox" value=""></td>*@
+                            <td>Do you  hear any noise when you close your mouth?</td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.pregunta25)
+                             </td>
+                            @* <td><input type="checkbox" value=""></td>*@
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>Do you blood excessively when you get cut?</td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.pregunta11)
+                            </td>
+                            @* <td><input type="checkbox" value=""></td>*@
+                            <td>Do you suffer thrush?</td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.pregunta26)
+                            </td>
+                            @*<td><input type="checkbox" value=""></td>*@
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>Do you suffer or suffered a blood problem?</td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.pregunta12)
+                            </td>
+                            @*<td><input type="checkbox" value=""></td>*@
+                            <td>Do you smoke?</td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.pregunta27)
+                            
+                            </td>
+                            @*<td><input type="checkbox" value=""></td>*@
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>Do you have HIV AIDS?</td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.pregunta13)
+                             </td>
+                            @*<td><input type="checkbox" value=""></td>*@
+                            <td>Do you have any citrus?</td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.pregunta28)
+                            </td>
+                            @*<td><input type="checkbox" value=""></td>*@
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>Are you pregnant?</td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.pregunta14)
+                             </td>
+                            @*<td><input type="checkbox" value=""></td>*@
+                            <td>Do you tightens your teeth during the night?</td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.pregunta29)
+                             </td>
+                            @*<td><input type="checkbox" value=""></td>*@
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>Are  you on birth control pills?</td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.pregunta15)
+                             </td>
+                            @*<td><input type="checkbox" value=""></td>*@
+                            <td></td>
+                            <td></td>
+                            @*<td></td>*@
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td>observaciones</td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.observaciones)
+                            </td>
+                            @*<td><input type="checkbox" value=""></td>*@
+                            <td>antecedente Clinico</td>
+                            <td>@Html.DisplayFor(modelItem => item.antecedenteClinico)</td>
+                            @*<td></td>*@
+                        </tr>
+
+}
+                    </tbody>
+                </table>
+
+                </div>
+        </fieldset>
+       </div>
+
+

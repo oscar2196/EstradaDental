@@ -19,7 +19,8 @@ namespace EstradaDental.Models
 
     
 
-        virtual public Cliente id { get; set; }
+        virtual public Cliente cliente { get; set; }
+        virtual public Admxx admxx { get; set; }
 
     }
 }

@@ -12,11 +12,7 @@ namespace EstradaDental.Models
         public Admxx(RegisterViewModel admxx) : base(admxx) { }
 
         virtual public ICollection<Cita> cita { get; set; }
-
         //Un cliente tiene muchos historiales
-        virtual public ICollection<Historial> historiales { get; set; }
-        virtual public ICollection<HistorialClinico> historialClinico { get; set; }
-
         virtual public ICollection<Archivo> archivos { get; set; }
 
 
