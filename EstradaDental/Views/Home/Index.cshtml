@@ -19,7 +19,9 @@
             <ul class="amazingslider-slides" style="display:none;">
                 <li>
                     <img src="/images/Diseno_de_sonrisa.jpg" alt="&lt;strong&gt;SING UP TO REQUEST AN APPOINTMENT AND MORE...&lt;/strong&gt;" title="&lt;strong&gt;SING UP TO REQUEST AN APPOINTMENT AND MORE...&lt;/strong&gt;" data-texteffect="Red box" />
-                    <button class="as-btn-orange-large">SING UP</button>
+                    <button class="as-btn-orange-large" onclick="Account/Register">SING UP</button>
+                    @*<INPUT TYPE="button" class="as-btn-orange-large" OnClick="Account/Register" value="SING UP">*@
+                    @*<a href="Account/Register" class="as-btn-orange-large" role="button">SING UP</a>*@
                 </li>
                 <li>
                     <a href="/images/shutterstock_160939997-lightbox.jpg" class="html5lightbox">
@@ -89,7 +91,7 @@
                     <b>OUR TEAM</b> Know us.
                 </p>
                 @Html.ActionLink("Read More","Team","Home", new { @class= "btn btn-danger", role="button" })
-                <a href="#" class="btn btn-danger" role="button">Read More</a>
+                @*<a href="#" class="btn btn-danger" role="button">Read More</a>*@
             </li>
             <li>
                 <div class="frame1">

@@ -1,31 +1,43 @@
-﻿@{
-    ViewBag.Title = "Contact";
-}  
-<h2>@ViewBag.Title</h2>
-<h3>@ViewBag.Message</h3>
+﻿
+<br />
 
-<h1>
-    Contact Us
-    Do you want to make an appointment
-</h1>
-
+    <div class="highlight">
+        <div class="clearfix">
+             <h1><strong> Do you want to make an appointment?<br /> Contact us, our doors are open with a smile we will help you.</strong></h1>
+        </div>
+    </div>
+<br />
+<br />
 
 <div class="element googlemap-element " id="mapa" style=""></div>
-     
-
-
 <div class="element googlemap-element " style="margin:auto; text-align:center">
-
     <iframe width="800" height="350" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBUtDW2kgUk1rCKcVwjQKecQIh7NwsTz-M&q=31.33072 -113.53748&zoom=16" frameborder="0" @*style="border:0"*@></iframe>
 </div>
-<div>
+
+
+<br />
+<div id="imgs">
+    <div id="consultorio" >
+        <img src="~/image/empresa.jpg" width="800" height="380" style="margin:auto" />
+    </div>
+</div>
+
+<div id="imgs">
+    <div id="consultorio">
+        <img src="~/image/djfdifhdiuvhibhdivjfhic.jpg" width="800" @*height="380"*@ style="margin:auto" />
+    </div>
+</div>
+
+@*<div class="panel-group">
+    <div class="panel panel-default">
     <fieldset>
-        <legend>Address: </legend>
+        <div class="panel-body">Address:</div>
         Revolución
         #160 local A
         Puerto Penasco, Sonora
         Mexico
     </fieldset>
+     </div>
     <br />
     <fieldset>
         <legend>Phone Number:</legend>
@@ -46,4 +58,4 @@
 <address>
     <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
     <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+</address>*@
