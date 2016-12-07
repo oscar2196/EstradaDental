@@ -326,8 +326,12 @@ C:\Users\mercu\Desktop\EstradaDental\EstradaDental\obj\Debug\EstradaDental.Migra
 C:\Users\mercu\Desktop\EstradaDental\EstradaDental\obj\Debug\EstradaDental.Migrations.histclinico.resources
 C:\Users\mercu\Desktop\EstradaDental\EstradaDental\obj\Debug\EstradaDental.Migrations.HCargument.resources
 C:\Users\mercu\Desktop\EstradaDental\EstradaDental\obj\Debug\EstradaDental.Migrations.archivo.resources
-C:\Users\mercu\Desktop\EstradaDental\EstradaDental\obj\Debug\EstradaDental.Migrations.archivo2.resources
 C:\Users\mercu\Desktop\EstradaDental\EstradaDental\obj\Debug\EstradaDental.csproj.GenerateResource.Cache
 C:\Users\mercu\Desktop\EstradaDental\EstradaDental\obj\Debug\EstradaDental.dll
 C:\Users\mercu\Desktop\EstradaDental\EstradaDental\obj\Debug\EstradaDental.pdb
 C:\Users\Angel\Source\Repos\EstradaDental\EstradaDental\obj\Debug\EstradaDental.csprojResolveAssemblyReference.cache
+C:\Users\mercu\Desktop\EstradaDental\EstradaDental\obj\Debug\EstradaDental.csprojResolveAssemblyReference.cache
+C:\Users\mercu\Desktop\EstradaDental\EstradaDental\obj\Debug\EstradaDental.Migrations.cambiopersonal.resources
+C:\Users\mercu\Desktop\EstradaDental\EstradaDental\obj\Debug\EstradaDental.Migrations.datoFail.resources
+C:\Users\mercu\Desktop\EstradaDental\EstradaDental\obj\Debug\EstradaDental.Migrations.Admin.resources
+C:\Users\mercu\Desktop\EstradaDental\EstradaDental\obj\Debug\EstradaDental.Migrations.salo.resources
