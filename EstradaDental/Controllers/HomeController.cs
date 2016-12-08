@@ -26,5 +26,18 @@ namespace EstradaDental.Controllers
 
             return View();
         }
+        public ActionResult Services()
+        {
+            return View();
+        }
+        public ActionResult Discount()
+        {
+            return View();
+        }
+        public ActionResult Team()
+        {
+            return View();
+        }
+
     }
 }
