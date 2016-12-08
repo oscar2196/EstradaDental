@@ -20,23 +20,23 @@ namespace EstradaDental.Controllers
         // GET: Clientes
         public ActionResult Index()
         {
-            return View(db.ApplicationUsers.ToList());
+            return View(db.Users.ToList());
         }
 
-        // GET: Clientes/Details/5
-        public ActionResult Details(string id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Cliente cliente = db.ApplicationUsers.Find(id);
-            if (cliente == null)
-            {
-                return HttpNotFound();
-            }
-            return View(cliente);
-        }
+        //// GET: Clientes/Details/5
+        //public ActionResult Details(string id)
+        //{
+        //    if (id == null)
+        //    {
+        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+        //    }
+        //    Cliente cliente = db.Users.Find(id);
+        //    if (cliente == null)
+        //    {
+        //        return HttpNotFound();
+        //    }
+        //    return View(cliente);
+        //}
 
         // GET: Clientes/Create
         public ActionResult Create()
@@ -84,19 +84,19 @@ namespace EstradaDental.Controllers
         }
 
         // GET: Clientes/Edit/5
-        public ActionResult Edit(string id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Cliente cliente = db.ApplicationUsers.Find(id);
-            if (cliente == null)
-            {
-                return HttpNotFound();
-            }
-            return View(cliente);
-        }
+        //public ActionResult Edit(string id)
+        //{
+        //    if (id == null)
+        //    {
+        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+        //    }
+        //    Cliente cliente = db.Users.Find(id);
+        //    if (cliente == null)
+        //    {
+        //        return HttpNotFound();
+        //    }
+        //    return View(cliente);
+        //}
 
         // POST: Clientes/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
@@ -115,30 +115,30 @@ namespace EstradaDental.Controllers
         }
 
         // GET: Clientes/Delete/5
-        public ActionResult Delete(string id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Cliente cliente = db.ApplicationUsers.Find(id);
-            if (cliente == null)
-            {
-                return HttpNotFound();
-            }
-            return View(cliente);
-        }
+        //public ActionResult Delete(string id)
+        //{
+        //    if (id == null)
+        //    {
+        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+        //    }
+        //    Cliente cliente = db.Users.Find(id);
+        //    if (cliente == null)
+        //    {
+        //        return HttpNotFound();
+        //    }
+        //    return View(cliente);
+        //}
 
         // POST: Clientes/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(string id)
-        {
-            Cliente cliente = db.ApplicationUsers.Find(id);
-            db.ApplicationUsers.Remove(cliente);
-            db.SaveChanges();
-            return RedirectToAction("Index");
-        }
+        //[HttpPost, ActionName("Delete")]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult DeleteConfirmed(string id)
+        //{
+        //    Cliente cliente = db.Users.Find(id);
+        //    db.Users.Remove(cliente);
+        //    db.SaveChanges();
+        //    return RedirectToAction("Index");
+        //}
 
         protected override void Dispose(bool disposing)
         {

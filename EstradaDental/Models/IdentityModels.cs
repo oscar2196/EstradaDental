@@ -23,6 +23,7 @@ namespace EstradaDental.Models
             this.PhoneNumber = persona.PhoneNumber;
             this.Email = persona.Email;
             this.UserName = persona.Email;
+            
         }
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
@@ -64,7 +65,7 @@ namespace EstradaDental.Models
         
         }
 
-        public System.Data.Entity.DbSet<EstradaDental.Models.Cliente> ApplicationUsers { get; set; }
+        //public System.Data.Entity.DbSet<EstradaDental.Models.Cliente> ApplicationUsers { get; set; }
 
         //public System.Data.Entity.DbSet<EstradaDental.Models.ApplicationUser> ApplicationUsers { get; set; }
 

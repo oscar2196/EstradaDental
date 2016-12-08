@@ -168,6 +168,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdmxxController.cs" />
     <Compile Include="Controllers\ArchivosController.cs" />
     <Compile Include="Controllers\CitasController.cs" />
     <Compile Include="Controllers\ClientesController.cs" />
@@ -358,6 +359,10 @@
     <Content Include="Views\Home\Team.cshtml" />
     <Content Include="Views\Home\Services.cshtml" />
     <Content Include="Views\Home\Discount.cshtml" />
+    <Content Include="Views\Admxx\Create.cshtml" />
+    <Content Include="Views\Admxx\Delete.cshtml" />
+    <Content Include="Views\Admxx\Index.cshtml" />
+    <Content Include="Views\Historials\inicio.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

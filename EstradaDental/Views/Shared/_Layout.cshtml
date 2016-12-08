@@ -24,6 +24,16 @@
                     @if (User.IsInRole("Admin"))
                     {
                         <li>@Html.ActionLink("Admin citas", "citas", "Citas")</li>
+                        
+                            <li>
+                                @Html.ActionLink("Usuarios", "citas", "Citas")
+                                <div>
+                                    @Html.ActionLink("Clientes", "Index", "Clientes")
+                                    @Html.ActionLink("Administradores", "Index", "Admxx")
+                                </div>
+
+                            </li>
+                        
                     }
                     @if (User.IsInRole("User"))
                     {

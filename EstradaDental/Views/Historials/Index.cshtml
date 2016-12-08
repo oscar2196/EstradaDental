@@ -8,9 +8,9 @@
 
 <h2>Index</h2>
 
-<p>
-    <a class="btn btn-danger" href="Historials/Create" role="button">Create New</a>
-</p>
+@*<p>
+   // <a class="btn btn-danger" href="Historials/Create" role="button">Create New</a>
+</p>*@
 <table class="table">
     <tr>
         <th>
@@ -20,9 +20,9 @@
             @Html.DisplayNameFor(model => model.fecha)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.clienteID)
+            @*@Html.DisplayNameFor(model => model.clienteID)*@<p>Name</p>
         </th>
-        <th></th>
+       
     </tr>
 
 @foreach (var item in Model) {
@@ -34,15 +34,11 @@
             @Html.DisplayFor(modelItem => item.fecha)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.clienteID)
+            @Html.DisplayFor(modelItem => item.clientes.nombre)
             @*<p name="nombre"></p>*@
             
         </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.historialID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.historialID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.historialID })
-        </td>
+      
     </tr>
 }
     </table>

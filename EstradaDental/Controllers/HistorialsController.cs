@@ -16,7 +16,7 @@ namespace EstradaDental.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Historials
-        [Authorize(Roles = "User, Admin")]
+        [Authorize(Roles = "User")]
         public ActionResult Index()
         {
 
@@ -27,7 +27,18 @@ namespace EstradaDental.Controllers
 
             return View(Hist);
         }
+        // GET: Historials
+        [Authorize(Roles = "User, Admin")]
+        public ActionResult inicio(string id)
+        {
 
+            
+            var Hist = new List<Historial>();
+            Hist = db.historial.Where(a => a.clienteID ==  id).ToList();
+            //string nombre = db.Users.were(a => a.nombre  );
+
+            return View(Hist);
+        }
         // GET: Historials/Details/5
         [Authorize(Roles ="User, Admin")]
         public ActionResult Details(int? id)
@@ -45,9 +56,11 @@ namespace EstradaDental.Controllers
         }
 
         // GET: Historials/Create
-        [Authorize(Roles ="User, Admin")]
+        [Authorize(Roles ="Admin")]
         public ActionResult Create()
         {
+           
+            ViewBag.clienteID = new SelectList(db.Users, "Id", "nombre");
             return View();
         }
 
@@ -55,23 +68,23 @@ namespace EstradaDental.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [Authorize(Roles ="User, Admin")]
+        [Authorize(Roles ="Admin")]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "historialID,comentario,fecha,clienteID")] Historial historial)
         {
             if (ModelState.IsValid)
             {
-                historial.clienteID = User.Identity.GetUserId();
+                //historial.clienteID = User.Identity.GetUserId();
                 db.historial.Add(historial);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("inicio", "Historials", new { id= historial.clienteID});
             }
-
+            ViewBag.clienteID = new SelectList(db.Users, "Id", "nombre", historial.clienteID);
             return View(historial);
         }
 
         // GET: Historials/Edit/5
-        [Authorize(Roles ="User, Admin")]
+        [Authorize(Roles ="Admin")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -90,7 +103,7 @@ namespace EstradaDental.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [Authorize(Roles ="User,Amin")]
+        [Authorize(Roles ="Admin")]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "historialID,comentario,fecha,clienteID")] Historial historial)
         {
