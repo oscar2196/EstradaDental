@@ -18,27 +18,29 @@ namespace EstradaDental.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Clientes
+        [Authorize(Roles = "Admin")]
         public ActionResult Index()
         {
-            return View(db.Users.ToList());
+            return View(db.cliente.ToList());
+        }
+        [Authorize(Roles = "Admin, User")]
+        //// GET: Clientes/Details/5 meter historialcinico
+        public ActionResult Details(string id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Cliente cliente = db.cliente.Find(id);
+            if (cliente == null)
+            {
+                return HttpNotFound();
+            }
+            return View(cliente);
         }
 
-        //// GET: Clientes/Details/5
-        //public ActionResult Details(string id)
-        //{
-        //    if (id == null)
-        //    {
-        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-        //    }
-        //    Cliente cliente = db.Users.Find(id);
-        //    if (cliente == null)
-        //    {
-        //        return HttpNotFound();
-        //    }
-        //    return View(cliente);
-        //}
-
         // GET: Clientes/Create
+        [AllowAnonymous]
         public ActionResult Create()
         {
             return View();
@@ -48,34 +50,36 @@ namespace EstradaDental.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [AllowAnonymous]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Create(
-            [Bind(Include = "nombre,apellidoP,apellidoM,direccion,fechaNac,Email,Password,ConfirmPassword,PhoneNumber,ciudad")] RegisterViewModel cliente, HttpPostedFileBase foto)
+            [Bind(Include = "nombre,apellidoP,apellidoM,direccion,fechaNac,Email,Password,ConfirmPassword,PhoneNumber,ciudad")] RegisterViewModel cliente, HttpPostedFileBase fotoUpload)
         {
+            Cliente Clientes = new Cliente(cliente);
             if (ModelState.IsValid)
             {
-                Archivo ar = new Archivo();
-                if (foto != null && foto.ContentLength > 0)
+               
+                   if (fotoUpload != null && fotoUpload.ContentLength > 0)
                 {
-
-                    ar.formatoContenido = foto.ContentType;
-                    ar.nombre = foto.FileName;
+                     Archivo ar = new Archivo();
+                    ar.formatoContenido = fotoUpload.ContentType;
+                    ar.nombre = fotoUpload.FileName;
                     ar.tipo = "Cliente";
-                    var leer = new System.IO.BinaryReader(foto.InputStream);
-                    ar.contenido = leer.ReadBytes(foto.ContentLength);
-
+                    var leer = new System.IO.BinaryReader(fotoUpload.InputStream);
+                    ar.contenido = leer.ReadBytes(fotoUpload.ContentLength);
+                    Clientes.archivos = new List<Archivo> { ar };
                 }
                 var UserManager = HttpContext.GetOwinContext().GetUserManager<ApplicationUserManager>();
-                Cliente Clientes = new Cliente(cliente);
+               
                 var result = await UserManager.CreateAsync(Clientes, cliente.Password);
 
-                Clientes.archivos = new List<Archivo> { ar };
-                db.Users.Add(Clientes);
-                db.SaveChanges();
+                
+                /*db.cliente.Add(Clientes);
+                db.SaveChanges();*/
                 if (result.Succeeded)
                 {
                     UserManager.AddToRole(Clientes.Id,"User");
-                    return RedirectToAction("Index","Home");
+                    return RedirectToAction("Create", "HistorialClinico");
                 }
                
             }
@@ -84,61 +88,79 @@ namespace EstradaDental.Controllers
         }
 
         // GET: Clientes/Edit/5
-        //public ActionResult Edit(string id)
-        //{
-        //    if (id == null)
-        //    {
-        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-        //    }
-        //    Cliente cliente = db.Users.Find(id);
-        //    if (cliente == null)
-        //    {
-        //        return HttpNotFound();
-        //    }
-        //    return View(cliente);
-        //}
+        [Authorize(Roles = "Admin, User")]
+        public ActionResult Edit(string id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Cliente cliente = db.cliente.Find(id);
+            if (cliente == null)
+            {
+                return HttpNotFound();
+            }
+            return View(cliente);
+        }
 
         // POST: Clientes/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize(Roles = "Admin, User")]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,nombre,apellidoP,apellidoM,direccion,fechaNac,Email,EmailConfirmed,PasswordHash,SecurityStamp,PhoneNumber,PhoneNumberConfirmed,TwoFactorEnabled,LockoutEndDateUtc,LockoutEnabled,AccessFailedCount,UserName,ciudad,MyProperty")] Cliente cliente)
+        public ActionResult Edit(
+            [Bind(Include = "Id,nombre,apellidoP,apellidoM,direccion,fechaNac,Email,PhoneNumber,ciudad,PasswordHash,UserName")]
+        Cliente cliente, HttpPostedFileBase fotoUpload)
         {
             if (ModelState.IsValid)
             {
+                if (fotoUpload != null && fotoUpload.ContentLength > 0)
+                {
+                    //int archivoID = alumnoEditado.archivos.Single()
+                    Archivo fotoPerfil = db.archivo.Single(ar => ar.clienteID == cliente.Id);
+                    var reader = new System.IO.BinaryReader(fotoUpload.InputStream);
+                    fotoPerfil.contenido = reader.ReadBytes(fotoUpload.ContentLength);
+
+                    //Se modifica el registro de la foto
+                    db.Entry(fotoPerfil).State = EntityState.Modified;
+                }
+
+
+
                 db.Entry(cliente).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
             return View(cliente);
         }
-
+        [Authorize(Roles = "Admin")]
         // GET: Clientes/Delete/5
-        //public ActionResult Delete(string id)
-        //{
-        //    if (id == null)
-        //    {
-        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-        //    }
-        //    Cliente cliente = db.Users.Find(id);
-        //    if (cliente == null)
-        //    {
-        //        return HttpNotFound();
-        //    }
-        //    return View(cliente);
-        //}
+        public ActionResult Delete(string id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Cliente cliente = db.cliente.Find(id);
+            if (cliente == null)
+            {
+                return HttpNotFound();
+            }
+            return View(cliente);
+        }
 
         // POST: Clientes/Delete/5
-        //[HttpPost, ActionName("Delete")]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult DeleteConfirmed(string id)
-        //{
-        //    Cliente cliente = db.Users.Find(id);
-        //    db.Users.Remove(cliente);
-        //    db.SaveChanges();
-        //    return RedirectToAction("Index");
-        //}
+        [Authorize(Roles = "Admin, User")]
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(string id)
+        {
+            Cliente cliente = db.cliente.Find(id);
+            db.Users.Remove(cliente);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
 
         protected override void Dispose(bool disposing)
         {

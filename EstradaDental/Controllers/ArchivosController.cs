@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 
 namespace EstradaDental.Controllers
-{   [Authorize(Roles ="Admin")]
+{   [Authorize(Roles ="Admin, User")]
     public class ArchivosController : Controller
     {   
         private ApplicationDbContext db = new ApplicationDbContext();

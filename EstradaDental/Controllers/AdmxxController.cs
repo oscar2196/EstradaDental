@@ -12,19 +12,23 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 
 namespace EstradaDental.Controllers
-{
+    //Autorizacion Admin
+{    [Authorize(Roles = "Admin")]
     public class AdmxxController : Controller
     {
+       
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Admxx
+        //[Authorize(Roles = "Admin")]
         public ActionResult Index()
         {
-            return View(db.Users.ToList());
+            return View(db.admxx.ToList());
         }
 
-      
+
         // GET: Admxx/Create
+        //[Authorize(Roles = "Admin")]
         public ActionResult Create()
         {
             return View();
@@ -35,6 +39,7 @@ namespace EstradaDental.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+       // [Authorize(Roles = "Admin")]
         public async Task<ActionResult> Create(
             [Bind(Include = "nombre,apellidoP,apellidoM,direccion,fechaNac,Email,Password,ConfirmPassword,PhoneNumber")] RegisterViewModel admxx)
         {
@@ -55,35 +60,68 @@ namespace EstradaDental.Controllers
             return View(admxx);
         }
 
-       
+        //GET: Clientes/Edit/5
+        //[Authorize(Roles = "Admin")]
+        public ActionResult Edit(string id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Admxx admxx = db.admxx.Find(id);
+            if (admxx == null)
+            {
+                return HttpNotFound();
+            }
+            return View(admxx);
+        }
 
-    
+        // POST: Clientes/Edit/5
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        //[Authorize(Roles = "Admin")]
+        public ActionResult Edit([Bind(Include = "nombre,apellidoP,apellidoM,direccion,fechaNac,Email,PhoneNumber,PasswordHash,UserName")] Admxx Admxx)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(Admxx).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(Admxx);
+        }
+
+
 
         // GET: Admxx/Delete/5
-        //public ActionResult Delete(string id)
-        //{
-        //    if (id == null)
-        //    {
-        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-        //    }
-        //    Admxx admxx = .Find(id);
-        //    if (admxx == null)
-        //    {
-        //        return HttpNotFound();
-        //    }
-        //    return View(admxx);
-        //}
+       // [Authorize(Roles = "Admin")]
+        public ActionResult Delete(string id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Admxx admxx = db.admxx.Find(id);
+            if (admxx == null)
+            {
+                return HttpNotFound();
+            }
+            return View(admxx);
+        }
 
-        // POST: Admxx/Delete/5
-        //[HttpPost, ActionName("Delete")]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult DeleteConfirmed(string id)
-        //{
-        //    Admxx admxx = db.ApplicationUsers.Find(id);
-        //    db.ApplicationUsers.Remove(admxx);
-        //    db.SaveChanges();
-        //    return RedirectToAction("Index");
-        //}
+        //POST: Admxx/Delete/5
+        //[Authorize(Roles = "Admin")]
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(string id)
+        {
+            Admxx admxx = db.admxx.Find(id);
+            db.admxx.Remove(admxx);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
 
         protected override void Dispose(bool disposing)
         {
@@ -93,5 +131,6 @@ namespace EstradaDental.Controllers
             }
             base.Dispose(disposing);
         }
+
     }
 }

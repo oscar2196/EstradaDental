@@ -25,6 +25,7 @@
                     {
                         <li>@Html.ActionLink("Admin citas", "citas", "Citas")</li>
                         
+
                             <li>
                                 @Html.ActionLink("Usuarios", "citas", "Citas")
                                 <div>
@@ -37,9 +38,11 @@
                     }
                     @if (User.IsInRole("User"))
                     {
+                       
 
                         <li>@Html.ActionLink("Dental History", "Index", "Historials")</li>
-                            <li>@Html.ActionLink("Dental Appointment", "Index", "Citas")</li>
+                            <li>@Html.ActionLink("Dental Appointment", "Index", "Citas")</li>                       
+                         <li>@Html.ActionLink("My Clinic History", "Details", "HistorialClinico")</li>
                     }
                 </ul>
                 @Html.Partial("_LoginPartial")

@@ -52,6 +52,9 @@ namespace EstradaDental.Models
         public DbSet<Historial> historial { get; set; }
         public DbSet<HistorialClinico> historialclinico { get; set; }
         public DbSet<Archivo> archivo { get; set; }
+        public DbSet<Cliente> cliente { get; set; }
+        public DbSet<Admxx> admxx { get; set; }
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {

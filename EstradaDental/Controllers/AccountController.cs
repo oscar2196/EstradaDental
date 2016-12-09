@@ -53,13 +53,13 @@ namespace EstradaDental.Controllers
             }
         }
 
-        [Authorize(Roles = "Admin")]
-        public ActionResult Index()
-        {
-            var todosLosUsuarios = UserManager.Users.ToList();
-            var vuser = from usr in todosLosUsuarios select new ViewModels.VMUserRoleName();
-            return View(todosLosUsuarios);
-        }
+        //[Authorize(Roles = "Admin")]
+        //public ActionResult Index()
+        //{
+        //    var todosLosUsuarios = UserManager.Users.ToList();
+        //    var vuser = from usr in todosLosUsuarios select new ViewModels.VMUserRoleName();
+        //    return View(todosLosUsuarios);
+        //}
 
         // GET: /Account/Login
         [AllowAnonymous]
@@ -145,62 +145,62 @@ namespace EstradaDental.Controllers
         //
         // GET: /Account/Register
         //regresa la vista 
-        [AllowAnonymous]
-        public ActionResult Register()
-        {
-            return View();
-        }
+        //[AllowAnonymous]
+        //public ActionResult Register()
+        //{
+        //    return View();
+        //}
 
-        //
-        // POST: /Account/Register
-        [HttpPost]
-        [AllowAnonymous]
-        [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Register(RegisterViewModel model,HttpPostedFileBase foto)
-        {
-            if (ModelState.IsValid)
-            {
-                //almacenar archivo 
-                //si se subio laa fotito se creara un nuevo registro 
-                Archivo ar = new Archivo();
-                if (foto!=null && foto.ContentLength>0)
-                {
+        ////
+        //// POST: /Account/Register
+        //[HttpPost]
+        //[AllowAnonymous]
+        //[ValidateAntiForgeryToken]
+        //public async Task<ActionResult> Register(RegisterViewModel model,HttpPostedFileBase foto)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        //almacenar archivo 
+        //        //si se subio laa fotito se creara un nuevo registro 
+        //        Archivo ar = new Archivo();
+        //        if (foto!=null && foto.ContentLength>0)
+        //        {
                     
-                    ar.formatoContenido = foto.ContentType;
-                    ar.nombre = foto.FileName;
-                    ar.tipo = "Cliente";
-                    var leer = new System.IO.BinaryReader(foto.InputStream);
-                    ar.contenido = leer.ReadBytes(foto.ContentLength);
+        //            ar.formatoContenido = foto.ContentType;
+        //            ar.nombre = foto.FileName;
+        //            ar.tipo = "Cliente";
+        //            var leer = new System.IO.BinaryReader(foto.InputStream);
+        //            ar.contenido = leer.ReadBytes(foto.ContentLength);
                    
-                }
+        //        }
 
-                //modificar
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email,
-                   nombre= model.nombre,apellidoP= model.apellidoP,
-                    direccion = model.direccion,PhoneNumber= model.PhoneNumber };
-                //user.archivos = new List<Archivo> { ar };
-                var result = await UserManager.CreateAsync(user, model.Password);
-                if (result.Succeeded)
-                {
-                    //se asigna el rol
-                    UserManager.AddToRole(user.Id, model.rol);
-                    //
-                    await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
+        //        //modificar
+        //        var user = new ApplicationUser { UserName = model.Email, Email = model.Email,
+        //           nombre= model.nombre,apellidoP= model.apellidoP,
+        //            direccion = model.direccion,PhoneNumber= model.PhoneNumber };
+        //        //user.archivos = new List<Archivo> { ar };
+        //        var result = await UserManager.CreateAsync(user, model.Password);
+        //        if (result.Succeeded)
+        //        {
+        //            //se asigna el rol
+        //            UserManager.AddToRole(user.Id, model.rol);
+        //            //
+        //            await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
                     
-                    // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
-                    // Send an email with this link
-                    // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
-                    // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
-                    // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
+        //            // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
+        //            // Send an email with this link
+        //            // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
+        //            // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
+        //            // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
 
-                    return RedirectToAction("Create", "HistorialClinico");
-                }
-                AddErrors(result);
-            }
+        //            return RedirectToAction("Create", "HistorialClinico");
+        //        }
+        //        AddErrors(result);
+        //    }
 
-            // If we got this far, something failed, redisplay form
-            return View(model);
-        }
+        //    // If we got this far, something failed, redisplay form
+        //    return View(model);
+        //}
 
         //
         // GET: /Account/ConfirmEmail

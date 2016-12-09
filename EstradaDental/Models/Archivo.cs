@@ -17,10 +17,10 @@ namespace EstradaDental.Models
 
         public byte[] contenido { get; set; }
 
-    
 
+        public string clienteID { get; set; }
         virtual public Cliente cliente { get; set; }
-        virtual public Admxx admxx { get; set; }
+       
 
     }
 }

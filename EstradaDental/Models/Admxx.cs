@@ -13,7 +13,7 @@ namespace EstradaDental.Models
 
         virtual public ICollection<Cita> cita { get; set; }
         //Un cliente tiene muchos historiales
-        virtual public ICollection<Archivo> archivos { get; set; }
+       
 
 
 
