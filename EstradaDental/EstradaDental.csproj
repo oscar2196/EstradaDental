@@ -225,9 +225,12 @@
     <Content Include="image\bg-adbox.png" />
     <Content Include="image\cama.jpg" />
     <Content Include="image\cama1.jpg" />
+    <Content Include="image\dentista1.jpg" />
     <Content Include="image\djfdifhdiuvhibhdivjfhic.jpg" />
     <Content Include="image\empresa.jpg" />
+    <Content Include="image\F7C9DAEE87EEBCC7.jpg" />
     <Content Include="image\familia.jpg" />
+    <Content Include="image\family.png" />
     <Content Include="image\googlemaps.png" />
     <Content Include="image\handshake.png" />
     <Content Include="image\icons.png" />
@@ -240,7 +243,9 @@
     <Content Include="image\img_ %2843%29.jpg" />
     <Content Include="image\img_ %288%29.jpg" />
     <Content Include="image\img_ %289%29.jpg" />
+    <Content Include="image\JASIEL.jpg" />
     <Content Include="image\meeting.jpg" />
+    <Content Include="image\ZAIRA.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Properties\PublishProfiles\estradaDental.pubxml" />

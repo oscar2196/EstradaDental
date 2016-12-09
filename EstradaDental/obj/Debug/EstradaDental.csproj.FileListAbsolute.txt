@@ -316,6 +316,6 @@ C:\Users\mercu\Desktop\EstradaDental\EstradaDental\obj\Debug\EstradaDental.cspro
 C:\Users\mercu\Desktop\EstradaDental\EstradaDental\obj\Debug\EstradaDental.dll
 C:\Users\mercu\Desktop\EstradaDental\EstradaDental\obj\Debug\EstradaDental.pdb
 C:\Users\Angel\Source\Repos\EstradaDental\EstradaDental\obj\Debug\EstradaDental.csprojResolveAssemblyReference.cache
-C:\Users\mercu\Desktop\EstradaDental\EstradaDental\obj\Debug\EstradaDental.csprojResolveAssemblyReference.cache
 C:\Users\mercu\Desktop\EstradaDental\EstradaDental\obj\Debug\EstradaDental.Migrations.allmigration.resources
 C:\Users\mercu\Desktop\EstradaDental\EstradaDental\obj\Debug\EstradaDental.Migrations.doctor.resources
+C:\Users\mercu\Desktop\EstradaDental\EstradaDental\obj\Debug\EstradaDental.csprojResolveAssemblyReference.cache
