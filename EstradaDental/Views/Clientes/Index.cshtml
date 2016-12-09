@@ -46,8 +46,7 @@
     if (item.archivos.Count>0) {
         fotito = item.archivos.SingleOrDefault(foto => foto.tipo == "Cliente").archivoID;
     }
-    <tr>
-        <td> 
+    <tr><td> 
             @if (fotito == 0)
             {
                 <img src="/image/AAA.png" alt="Alternate Text" height="70" width="100"/>
