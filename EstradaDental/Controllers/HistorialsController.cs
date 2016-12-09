@@ -28,7 +28,7 @@ namespace EstradaDental.Controllers
             return View(Hist);
         }
         // GET: Historials
-        [Authorize(Roles = "User, Admin")]
+        [Authorize(Roles = "Admin")]
         public ActionResult inicio(string id)
         {
 

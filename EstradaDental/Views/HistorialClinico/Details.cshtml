@@ -7,9 +7,10 @@
 
 <h2>Details</h2>
 
+@foreach (var item in Model)
+{
+   @Html.ActionLink("Edit", "Edit", new { id = item.historialClinicoID })
 
-
-   
     <div class="dl-horizontal">
         <fieldset>
             <legend>Medical History</legend>
@@ -26,8 +27,8 @@
                         </tr>
                     </thead>
                     <tbody>
-@foreach (var item in Model)
-{
+
+
                         <tr>
                             <td>1</td>
                             <td>Are you under medical treatment?</td>
@@ -244,12 +245,12 @@
                             @*<td></td>*@
                         </tr>
 
-}
+
                     </tbody>
                 </table>
 
                 </div>
         </fieldset>
        </div>
-
+}
 

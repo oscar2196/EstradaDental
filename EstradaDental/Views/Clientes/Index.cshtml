@@ -3,7 +3,7 @@
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
-    int fotito = 0;
+   
 }
 
 <h2>Index</h2>
@@ -42,6 +42,7 @@
     </tr>
 
 @foreach (var item in Model) {
+    int fotito = 0;
     if (item.archivos.Count>0) {
         fotito = item.archivos.SingleOrDefault(foto => foto.tipo == "Cliente").archivoID;
     }
@@ -49,11 +50,11 @@
         <td> 
             @if (fotito == 0)
             {
-                <img src="/image/AAA.png" alt="Alternate Text" />
+                <img src="/image/AAA.png" alt="Alternate Text" height="70" width="100"/>
             }
             else
             {
-                <img src="@Url.Action("download","Archivo",new {id=fotito})"  />
+                <img src="@Url.Action("download","Archivos",new {id=fotito})" height="70" width="100" />
             }
 
 
@@ -87,9 +88,15 @@
         </td>
        
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            @Html.ActionLink("Historial Dental", "inicio", "Historials", new { id = item.Id },null) |
+            @Html.ActionLink("Historial Clinico", "Details", "HistorialClinico", new { id = item.Id },null) |
+            @Html.ActionLink("Citas", "Citas","Citas", new { id = item.Id },null) |
+            
+             <br/>
+            @Html.ActionLink("editar", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("detalles", "Details", new { id=item.Id }) |
+            @Html.ActionLink("eliminar", "Delete", new { id=item.Id })
+           
         </td>
     </tr>
 }

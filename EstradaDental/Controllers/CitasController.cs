@@ -17,10 +17,11 @@ namespace EstradaDental.Controllers
 
         // GET: Citas
         [Authorize(Roles = "Admin")]
-        public ActionResult citas()
+        public ActionResult citas(string idCliente)
         {
-            var cita = db.cita.Include(c => c.cliente);
-            return View(cita.ToList());
+            var resBusqueda = new List<Cita>();
+            resBusqueda = db.cita.Where(a => a.clienteID.Contains(idCliente)).ToList();
+            return View(resBusqueda);
         }
 
         // GET: Citas/index/
