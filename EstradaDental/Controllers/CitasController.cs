@@ -62,6 +62,7 @@ namespace EstradaDental.Controllers
         {
 
             ViewBag.clienteID = new SelectList(db.Users, "Id", "nombre");
+   
             
             return View();
         }
